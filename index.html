@@ -6,34 +6,32 @@
   <title>Marcellino Natanael – Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css"/>
 </head>
 <body>
 
-  <!-- ─── LIGHTBOX OVERLAY ─────────────────────────────────── -->
+  <!-- LIGHTBOX -->
   <div class="lightbox-overlay" id="lightboxOverlay">
     <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
     <img class="lightbox-img" id="lightboxImg" src="" alt="" />
   </div>
 
-  <!-- ─── NAVBAR ─────────────────────────────────────────────────────── -->
+  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="#beranda" class="nav-logo">
         <div class="logo-text">
-          <span class="logo-name">Marcellino</span>
-          <span class="logo-sub">Natanael</span>
+          <span class="logo-name">Marcellino Natanael</span>
         </div>
       </a>
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#beranda"    class="nav-link active" data-i18n="nav_home">Beranda</a></li>
-        <li><a href="#tentang"   class="nav-link" data-i18n="nav_about">Tentang Saya</a></li>
+        <li><a href="#tentang"   class="nav-link" data-i18n="nav_about">Tentang</a></li>
         <li><a href="#portfolio" class="nav-link" data-i18n="nav_portfolio">Portfolio</a></li>
         <li><a href="#pendidikan" class="nav-link" data-i18n="nav_edu">Pendidikan</a></li>
         <li><a href="#pengalaman" class="nav-link" data-i18n="nav_exp">Pengalaman</a></li>
-        <li><a href="#artikel"   class="nav-link" data-i18n="nav_article">Artikel</a></li>
         <li><a href="#kontak"    class="nav-link nav-cta" data-i18n="nav_contact">Kontak</a></li>
       </ul>
 
@@ -50,85 +48,157 @@
     </div>
   </nav>
 
-  <!-- ─── HERO ────────────────────────────────────────────────── -->
+  <!-- SCROLL PROGRESS BAR -->
+  <div class="scroll-progress" id="scrollProgress"></div>
   <section class="hero" id="beranda">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
     <div class="hero-inner">
       <div class="hero-left">
-        <span class="hero-badge" data-i18n="hero_badge">UI/UX DESIGNER &amp; FULL-STACK DEVELOPER</span>
+        <div class="hero-badge-wrap">
+          <span class="hero-badge-dot"></span>
+          <span class="hero-badge" data-i18n="hero_badge">UI/UX Designer &amp; Full-Stack Developer</span>
+        </div>
         <h1 class="hero-title">
-          <span data-i18n="hero_greeting">Hi Semua,</span><br>
-          <span data-i18n="hero_iam">Saya</span> <span class="hero-name">Marcellino</span><br>
-          <span class="hero-accent">Natanael.</span>
+          <span class="hero-greeting" data-i18n="hero_greeting">Hi Semua,</span>
+          <span class="hero-name-line">
+            <span data-i18n="hero_iam">Saya</span> Marcellino
+          </span>
+          <span class="hero-surname">Natanael.</span>
         </h1>
         <p class="hero-desc" data-i18n="hero_desc">
           UI/UX Designer dan Full-Stack Web Developer. Portofolio ini menampilkan proyek dan kontribusi saya sebagai pengembang di bidang teknologi dan desain.
         </p>
         <div class="hero-actions">
-          <a href="#kontak" class="btn-primary" data-i18n="hero_btn_contact">Hubungi Saya</a>
-          <a href="#portfolio" class="btn-outline" data-i18n="hero_btn_portfolio">Lihat Portfolio</a>
+          <a href="#kontak" class="btn-primary" data-i18n="hero_btn_contact">
+            <span>Hubungi Saya</span>
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/></svg>
+          </a>
+          <a href="#portfolio" class="btn-outline" data-i18n="hero_btn_portfolio">
+            <span>Lihat Portfolio</span>
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Proyek Selesai</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Penghargaan Lomba</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">4+</span>
+            <span class="stat-label">Tahun Pengalaman</span>
+          </div>
         </div>
       </div>
       <div class="hero-right">
         <div class="hero-photo-wrapper">
-          <div class="hero-photo-bg"></div>
-          <div class="hero-photo">
-            <img src="img/Profile.png" alt="Marcellino Natanael" class="zoomable" />
+          <div class="hero-photo-frame">
+            <div class="hero-photo">
+              <img src="img/Profile.png" alt="Marcellino Natanael" class="zoomable" />
+            </div>
+          </div>
+          <div class="hero-floating-card card-1">
+            <span class="fc-icon">🏆</span>
+            <div><strong>Juara 1</strong><br><small>IT Fest 2025</small></div>
+          </div>
+          <div class="hero-floating-card card-2">
+            <span class="fc-icon">🎮</span>
+            <div><strong>4 Games</strong><br><small>Published</small></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="hero-wave">
-      <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#F8FAFF"/>
-      </svg>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- ─── TENTANG SAYA ─────────────────────────────────────────── -->
+  <!-- TENTANG SAYA -->
   <section class="section about-section" id="tentang">
     <div class="container">
-      <div class="section-label" data-i18n="about_label">TENTANG SAYA</div>
-      <h2 class="section-title" data-i18n="about_title">UI/UX Design &amp; Full-Stack<br>Web Developer</h2>
+      <div class="section-header">
+        <div class="section-label" data-i18n="about_label">TENTANG SAYA</div>
+        <h2 class="section-title" data-i18n="about_title">UI/UX Design &amp;<br>Full-Stack Developer</h2>
+      </div>
 
       <div class="about-grid">
         <div class="about-bio">
-          <p data-i18n="about_bio">Perkenalkan, saya <strong>Marcellino Natanael</strong>, mahasiswa akhir program studi Sistem Informasi semester 7 Universitas Bunda Mulia Ancol.</p>
+          <p class="about-lead" data-i18n="about_bio">Perkenalkan, saya <strong>Marcellino Natanael</strong>, mahasiswa akhir program studi Sistem Informasi semester 7 Universitas Bunda Mulia Ancol.</p>
 
           <div class="skill-block">
             <h4 data-i18n="skill_main_title">Keahlian Utama</h4>
             <p data-i18n="skill_main_desc">Spesialis perancangan desain antarmuka menggunakan Figma dan pengembangan sistem menggunakan PHP dengan framework Laravel.</p>
-            <ul class="skill-list">
-              <li><strong>Figma</strong> — <span data-i18n="skill_figma">Wireframe &amp; Prototyping</span></li>
-              <li><strong>Backend</strong> — PHP · Laravel · Postman</li>
-              <li><strong>Frontend</strong> — HTML · CSS · JS · Tailwind · Bootstrap</li>
-              <li><strong>Metodologi</strong> — Clean Code · SDLC · XP</li>
-            </ul>
           </div>
 
-          <div class="skill-block">
-            <h4 data-i18n="skill_other_title">Keahlian Lainnya</h4>
-            <ul class="skill-list">
-              <li><strong>Game Engine</strong> — Unreal Engine 5 · Blueprint · C++</li>
-              <li><strong>Editing</strong> — Adobe Premiere Pro · Photoshop · CapCut</li>
-              <li><strong>Desain Grafis</strong> — After Effects · Canva</li>
-            </ul>
+          <div class="skill-tags-section">
+            <div class="skill-category">
+              <span class="skill-cat-label">Design</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Figma</span>
+                <span class="skill-tag">Wireframing</span>
+                <span class="skill-tag">Prototyping</span>
+                <span class="skill-tag">After Effects</span>
+                <span class="skill-tag">Photoshop</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <span class="skill-cat-label">Development</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Laravel</span>
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Tailwind</span>
+                <span class="skill-tag">MySQL</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <span class="skill-cat-label">Game Dev</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Unreal Engine 5</span>
+                <span class="skill-tag">Blueprint</span>
+                <span class="skill-tag">C++</span>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div class="skill-block">
+        <div class="about-cards">
+          <div class="about-card ac-primary">
+            <div class="ac-icon">🎯</div>
             <h4 data-i18n="contrib_title">Kontribusi Profesional</h4>
             <p data-i18n="contrib_desc">Bertanggung jawab penuh atas seluruh siklus pengembangan sistem informasi perusahaan.</p>
           </div>
+          <div class="about-card ac-secondary">
+            <div class="ac-icon">⚡</div>
+            <h4>Metodologi</h4>
+            <p>Clean Code · SDLC · Extreme Programming (XP) · Waterfall</p>
+          </div>
+          <div class="about-card ac-accent">
+            <div class="ac-icon">🏅</div>
+            <h4>Prestasi</h4>
+            <p>Juara 1 IT Fest 2025 · Juara 3 + Favorit I/O Fest 2024</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── PORTFOLIO ───────────────────────────────────────────── -->
+  <!-- PORTFOLIO -->
   <section class="section portfolio-section" id="portfolio">
     <div class="container">
-      <div class="section-label" data-i18n="port_label">PROJECT</div>
-      <h2 class="section-title" data-i18n="port_title">Beberapa Proyek yang<br>Pernah Saya Kembangkan</h2>
+      <div class="section-header">
+        <div class="section-label" data-i18n="port_label">PROJECT</div>
+        <h2 class="section-title" data-i18n="port_title">Proyek yang<br>Pernah Saya Kembangkan</h2>
+      </div>
 
       <div class="portfolio-filter">
         <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Semua</button>
@@ -139,7 +209,7 @@
 
       <div class="portfolio-grid" id="portfolioGrid">
 
-        <!-- ── UI/UX 1: Ardor ── -->
+        <!-- UI/UX 1: Ardor -->
         <div class="project-card" data-category="uiux">
           <div class="project-mockups">
             <img src="img/Welcome page.png" alt="Ardor Screen 1" class="mockup-img zoomable" />
@@ -147,10 +217,12 @@
             <img src="img/Smart chat page.png" alt="Ardor Screen 3" class="mockup-img zoomable" />
           </div>
           <div class="project-info">
-            <span class="project-tag">UI/UX Design</span>
-            <h3>Ardor <span class="project-type" data-i18n="p1_type">(Desain Aplikasi Mobile)</span></h3>
+            <div class="project-meta">
+              <span class="project-tag">UI/UX Design</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3>Ardor <span class="project-type" data-i18n="p1_type">(Mobile App Design)</span></h3>
             <p data-i18n="p1_desc">Aplikasi pelacakan olahraga harian untuk kebugaran tubuh dengan integrasi AI yang canggih.</p>
-            <!-- Dropdown Toggle -->
             <button class="project-dropdown-toggle" aria-expanded="false">
               <span data-i18n="detail_link">Lihat Detail</span>
               <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
@@ -168,7 +240,7 @@
           </div>
         </div>
 
-        <!-- ── UI/UX 2: Re-Trash ── -->
+        <!-- UI/UX 2: Re-Trash -->
         <div class="project-card" data-category="uiux">
           <div class="project-mockups">
             <img src="img/Retrash_Splash_page.png" alt="Retrash Screen 1" class="mockup-img zoomable" />
@@ -176,27 +248,24 @@
             <img src="img/Retrash_Home_page.png" alt="Retrash Screen 3" class="mockup-img zoomable" />
           </div>
           <div class="project-info">
-            <span class="project-tag">UI/UX Design</span>
-            <h3>Re-Trash <span class="project-type" data-i18n="p2_type">(Desain Aplikasi Mobile)</span></h3>
+            <div class="project-meta">
+              <span class="project-tag">UI/UX Design</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3>Re-Trash <span class="project-type" data-i18n="p2_type">(Mobile App Design)</span></h3>
             <p data-i18n="p2_desc">Aplikasi daur ulang sampah dengan reward berupa poin untuk membuat lingkungan bersih yang berkelanjutan.</p>
             <button class="project-dropdown-toggle" aria-expanded="false">
               <span data-i18n="detail_link">Lihat Detail</span>
               <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="project-dropdown" data-type="uiux">
-              <div class="dropdown-row">
-                <span class="dropdown-label" data-i18n="dd_figma">Figma Design</span>
-                <a href="#" class="dropdown-link" target="_blank" data-i18n="dd_open_figma">Buka di Figma →</a>
-              </div>
-              <div class="dropdown-row">
-                <span class="dropdown-label" data-i18n="dd_proto">Prototype</span>
-                <a href="#" class="dropdown-link" target="_blank" data-i18n="dd_open_proto">Buka Prototype →</a>
-              </div>
+              <div class="dropdown-row"><span class="dropdown-label" data-i18n="dd_figma">Figma Design</span><a href="#" class="dropdown-link" target="_blank" data-i18n="dd_open_figma">Buka di Figma →</a></div>
+              <div class="dropdown-row"><span class="dropdown-label" data-i18n="dd_proto">Prototype</span><a href="#" class="dropdown-link" target="_blank" data-i18n="dd_open_proto">Buka Prototype →</a></div>
             </div>
           </div>
         </div>
 
-        <!-- ── UI/UX 3: Ciputra E-Property ── -->
+        <!-- UI/UX 3: Ciputra -->
         <div class="project-card" data-category="uiux">
           <div class="project-mockups">
             <img src="img/Ciputra_login_page.png" alt="Ciputra Screen 1" class="mockup-img zoomable" />
@@ -204,27 +273,24 @@
             <img src="img/Ciputra_Properti_page.png" alt="Ciputra Screen 3" class="mockup-img zoomable" />
           </div>
           <div class="project-info">
-            <span class="project-tag">UI/UX Design</span>
-            <h3>Ciputra E-Property <span class="project-type" data-i18n="p3_type">(Desain Aplikasi Mobile)</span></h3>
-            <p data-i18n="p3_desc">Aplikasi super app Ciputra dengan mengintegrasikan seluruh proses pencarian rumah, pembayaran tagihan, hingga pembayaran hanya dalam satu app saja.</p>
+            <div class="project-meta">
+              <span class="project-tag">UI/UX Design</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3>Ciputra E-Property <span class="project-type" data-i18n="p3_type">(Mobile App Design)</span></h3>
+            <p data-i18n="p3_desc">Super app Ciputra mengintegrasikan pencarian rumah, pembayaran tagihan, dan transaksi dalam satu aplikasi.</p>
             <button class="project-dropdown-toggle" aria-expanded="false">
               <span data-i18n="detail_link">Lihat Detail</span>
               <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="project-dropdown" data-type="uiux">
-              <div class="dropdown-row">
-                <span class="dropdown-label" data-i18n="dd_figma">Figma Design</span>
-                <a href="#" class="dropdown-link" target="_blank" data-i18n="dd_open_figma">Buka di Figma →</a>
-              </div>
-              <div class="dropdown-row">
-                <span class="dropdown-label" data-i18n="dd_proto">Prototype</span>
-                <a href="#" class="dropdown-link" target="_blank" data-i18n="dd_open_proto">Buka Prototype →</a>
-              </div>
+              <div class="dropdown-row"><span class="dropdown-label">Figma Design</span><a href="#" class="dropdown-link" target="_blank">Buka di Figma →</a></div>
+              <div class="dropdown-row"><span class="dropdown-label">Prototype</span><a href="#" class="dropdown-link" target="_blank">Buka Prototype →</a></div>
             </div>
           </div>
         </div>
 
-        <!-- ── UI/UX 4: Padelin ── -->
+        <!-- UI/UX 4: Padelin -->
         <div class="project-card" data-category="uiux">
           <div class="project-mockups">
             <img src="img/Padelin_Sign-In_page.png" alt="Padelin Screen 1" class="mockup-img zoomable" />
@@ -232,27 +298,24 @@
             <img src="img/Padelin_Community_Join_page.png" alt="Padelin Screen 3" class="mockup-img zoomable" />
           </div>
           <div class="project-info">
-            <span class="project-tag">UI/UX Design</span>
-            <h3>Padelin <span class="project-type" data-i18n="p4_type">(Desain Aplikasi Mobile)</span></h3>
-            <p data-i18n="p4_desc">Aplikasi kursus olahraga kekinian yaitu padelin yang digabungkan dengan sistem manajemen pengetahuan agar pengguna mendapat ilmu dari apa yang mereka pelajari di dalam aplikasi bersama coach maupun komunitas.</p>
+            <div class="project-meta">
+              <span class="project-tag">UI/UX Design</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3>Padelin <span class="project-type" data-i18n="p4_type">(Mobile App Design)</span></h3>
+            <p data-i18n="p4_desc">Aplikasi kursus padel dengan sistem manajemen pengetahuan bersama coach dan komunitas.</p>
             <button class="project-dropdown-toggle" aria-expanded="false">
-              <span data-i18n="detail_link">Lihat Detail</span>
+              <span>Lihat Detail</span>
               <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="project-dropdown" data-type="uiux">
-              <div class="dropdown-row">
-                <span class="dropdown-label" data-i18n="dd_figma">Figma Design</span>
-                <a href="#" class="dropdown-link" target="_blank" data-i18n="dd_open_figma">Buka di Figma →</a>
-              </div>
-              <div class="dropdown-row">
-                <span class="dropdown-label" data-i18n="dd_proto">Prototype</span>
-                <a href="#" class="dropdown-link" target="_blank" data-i18n="dd_open_proto">Buka Prototype →</a>
-              </div>
+              <div class="dropdown-row"><span class="dropdown-label">Figma Design</span><a href="#" class="dropdown-link" target="_blank">Buka di Figma →</a></div>
+              <div class="dropdown-row"><span class="dropdown-label">Prototype</span><a href="#" class="dropdown-link" target="_blank">Buka Prototype →</a></div>
             </div>
           </div>
         </div>
 
-        <!-- ── UI/UX 5: Ladang Amal ── -->
+        <!-- UI/UX 5: Ladang Amal -->
         <div class="project-card" data-category="uiux">
           <div class="project-mockups">
             <img src="img/Login_UI.png" alt="Ladang Amal Screen 1" class="mockup-img zoomable" />
@@ -260,27 +323,24 @@
             <img src="img/Peta.png" alt="Ladang Amal Screen 3" class="mockup-img zoomable" />
           </div>
           <div class="project-info">
-            <span class="project-tag">UI/UX Design</span>
-            <h3>Ladang Amal <span class="project-type" data-i18n="p5_type">(Desain Aplikasi Mobile)</span></h3>
-            <p data-i18n="p5_desc">Aplikasi penggalangan donasi untuk korban yang terdampak bencana guna mendukung gerakan kemanusiaan antar sesama.</p>
+            <div class="project-meta">
+              <span class="project-tag">UI/UX Design</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3>Ladang Amal <span class="project-type" data-i18n="p5_type">(Mobile App Design)</span></h3>
+            <p data-i18n="p5_desc">Aplikasi penggalangan donasi untuk korban bencana guna mendukung gerakan kemanusiaan.</p>
             <button class="project-dropdown-toggle" aria-expanded="false">
-              <span data-i18n="detail_link">Lihat Detail</span>
+              <span>Lihat Detail</span>
               <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="project-dropdown" data-type="uiux">
-              <div class="dropdown-row">
-                <span class="dropdown-label" data-i18n="dd_figma">Figma Design</span>
-                <a href="#" class="dropdown-link" target="_blank" data-i18n="dd_open_figma">Buka di Figma →</a>
-              </div>
-              <div class="dropdown-row">
-                <span class="dropdown-label" data-i18n="dd_proto">Prototype</span>
-                <a href="#" class="dropdown-link" target="_blank" data-i18n="dd_open_proto">Buka Prototype →</a>
-              </div>
+              <div class="dropdown-row"><span class="dropdown-label">Figma Design</span><a href="#" class="dropdown-link" target="_blank">Buka di Figma →</a></div>
+              <div class="dropdown-row"><span class="dropdown-label">Prototype</span><a href="#" class="dropdown-link" target="_blank">Buka Prototype →</a></div>
             </div>
           </div>
         </div>
 
-        <!-- ── Web 1: Administration CRUD ── -->
+        <!-- Web 1: Administration CRUD -->
         <div class="project-card" data-category="web">
           <div class="project-mockups">
             <img src="img/Crud_1.png" alt="Admin CRUD Screen 1" class="mockup-img zoomable" />
@@ -288,35 +348,26 @@
             <img src="img/Crud_3.png" alt="Admin CRUD Screen 3" class="mockup-img zoomable" />
           </div>
           <div class="project-info">
-            <span class="project-tag">Web Development</span>
+            <div class="project-meta">
+              <span class="project-tag project-tag--web">Web Dev</span>
+              <span class="project-year">2025</span>
+            </div>
             <h3>Administration CRUD <span class="project-type" data-i18n="p6_type">(Web Development)</span></h3>
-            <p data-i18n="p6_desc">Aplikasi administrasi dengan sistem create, read, update dan delete yang dikembangkan untuk PT Karisma Dinamika Purwa dalam menunjang operasional perusahaan.</p>
+            <p data-i18n="p6_desc">Sistem administrasi CRUD untuk PT Karisma Dinamika Purwa dalam menunjang operasional perusahaan.</p>
             <button class="project-dropdown-toggle" aria-expanded="false">
-              <span data-i18n="detail_link">Lihat Detail</span>
+              <span>Lihat Detail</span>
               <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="project-dropdown" data-type="web">
-              <div class="dropdown-row">
-                <span class="dropdown-label" data-i18n="dd_framework">Framework</span>
-                <span class="dropdown-value">Laravel 12</span>
-              </div>
-              <div class="dropdown-row">
-                <span class="dropdown-label" data-i18n="dd_lang">Bahasa Pemrograman</span>
-                <span class="dropdown-value">PHP · HTML · CSS · JavaScript</span>
-              </div>
-              <div class="dropdown-row">
-                <span class="dropdown-label" data-i18n="dd_db">Database</span>
-                <span class="dropdown-value">MySQL</span>
-              </div>
-              <div class="dropdown-row">
-                <span class="dropdown-label" data-i18n="dd_method">Metode</span>
-                <span class="dropdown-value">SDLC – Waterfall</span>
-              </div>
+              <div class="dropdown-row"><span class="dropdown-label">Framework</span><span class="dropdown-value">Laravel 12</span></div>
+              <div class="dropdown-row"><span class="dropdown-label">Bahasa</span><span class="dropdown-value">PHP · HTML · CSS · JS</span></div>
+              <div class="dropdown-row"><span class="dropdown-label">Database</span><span class="dropdown-value">MySQL</span></div>
+              <div class="dropdown-row"><span class="dropdown-label">Metode</span><span class="dropdown-value">SDLC – Waterfall</span></div>
             </div>
           </div>
         </div>
 
-        <!-- ── Web 2: Sistem Pendukung Keputusan ── -->
+        <!-- Web 2: SPK -->
         <div class="project-card" data-category="web">
           <div class="project-mockups">
             <img src="img/Karisma_Dashboard_Page.png" alt="SPK Screen 1" class="mockup-img zoomable" />
@@ -324,35 +375,26 @@
             <img src="img/Karisma_Assessment_Weigh_ Page.png" alt="SPK Screen 3" class="mockup-img zoomable" />
           </div>
           <div class="project-info">
-            <span class="project-tag">Web Development</span>
+            <div class="project-meta">
+              <span class="project-tag project-tag--web">Web Dev</span>
+              <span class="project-year">2025</span>
+            </div>
             <h3>Sistem Pendukung Keputusan <span class="project-type" data-i18n="p7_type">(Web Development)</span></h3>
-            <p data-i18n="p7_desc">Aplikasi berbasis website yang dirancang untuk menentukan prioritas aset lelang pada PT Karisma Dinamika Purwa dengan menggunakan algoritma Simple Additive Weighting (SAW).</p>
+            <p data-i18n="p7_desc">Aplikasi prioritas aset lelang PT Karisma Dinamika Purwa menggunakan algoritma Simple Additive Weighting (SAW).</p>
             <button class="project-dropdown-toggle" aria-expanded="false">
-              <span data-i18n="detail_link">Lihat Detail</span>
+              <span>Lihat Detail</span>
               <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="project-dropdown" data-type="web">
-              <div class="dropdown-row">
-                <span class="dropdown-label" data-i18n="dd_framework">Framework</span>
-                <span class="dropdown-value">Laravel 12</span>
-              </div>
-              <div class="dropdown-row">
-                <span class="dropdown-label" data-i18n="dd_lang">Bahasa Pemrograman</span>
-                <span class="dropdown-value">PHP · HTML · CSS · JavaScript</span>
-              </div>
-              <div class="dropdown-row">
-                <span class="dropdown-label" data-i18n="dd_db">Database</span>
-                <span class="dropdown-value">MySQL</span>
-              </div>
-              <div class="dropdown-row">
-                <span class="dropdown-label" data-i18n="dd_method">Metode</span>
-                <span class="dropdown-value">Extreme Programming (XP)</span>
-              </div>
+              <div class="dropdown-row"><span class="dropdown-label">Framework</span><span class="dropdown-value">Laravel 12</span></div>
+              <div class="dropdown-row"><span class="dropdown-label">Bahasa</span><span class="dropdown-value">PHP · HTML · CSS · JS</span></div>
+              <div class="dropdown-row"><span class="dropdown-label">Database</span><span class="dropdown-value">MySQL</span></div>
+              <div class="dropdown-row"><span class="dropdown-label">Metode</span><span class="dropdown-value">Extreme Programming (XP)</span></div>
             </div>
           </div>
         </div>
 
-        <!-- ── Game 1: Wewe Gombel ── -->
+        <!-- Game 1: Wewe Gombel -->
         <div class="project-card" data-category="game">
           <div class="project-mockups">
             <img src="img/Gombel_1 (1).png" alt="Wewe Gombel Screen 1" class="mockup-img zoomable" />
@@ -360,43 +402,46 @@
             <img src="img/Gombel_1 (3).png" alt="Wewe Gombel Screen 3" class="mockup-img zoomable" />
           </div>
           <div class="project-info">
-            <span class="project-tag">Game Development</span>
+            <div class="project-meta">
+              <span class="project-tag project-tag--game">Game Dev</span>
+              <span class="project-badge-award">🏆 Juara 3 + Favorit</span>
+            </div>
             <h3>Wewe Gombel Horror Game <span class="project-type">(Unreal Engine 5)</span></h3>
-            <p data-i18n="p8_desc">Game 3D horror lokal bercerita tentang seorang anak yang diculik wewe gombel dan harus melarikan diri dengan mekanik puzzle solving dan escaping, Game ini merupakan projek lomba I/O Fest yang diselenggarakan oleh Universitas Tarumanegara pada tahun 2024 menjuarai peringkat ke-3 dan juara favorit.</p>
+            <p data-i18n="p8_desc">Game 3D horror lokal tentang anak yang diculik wewe gombel. Juara 3 &amp; Favorit I/O Fest 2024 – Universitas Tarumanegara.</p>
             <button class="project-dropdown-toggle" aria-expanded="false">
-              <span data-i18n="detail_link">Lihat Detail</span>
+              <span>Lihat Detail</span>
               <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="project-dropdown" data-type="game">
               <div class="sysreq-grid">
                 <div class="sysreq-col">
-                  <div class="sysreq-title" data-i18n="dd_min_req">Minimum Requirements</div>
-                  <div class="sysreq-row"><span data-i18n="dd_os">OS</span><span>Windows 10/11 64-bit</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_cpu">Processor</span><span>Intel Core i5-8400</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_gpu">Graphics Card</span><span>NVIDIA GTX 1060 6GB</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_ram">RAM</span><span>8 GB</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_ssd">Storage</span><span>10 GB SSD</span></div>
+                  <div class="sysreq-title">Minimum</div>
+                  <div class="sysreq-row"><span>OS</span><span>Win 10/11 64-bit</span></div>
+                  <div class="sysreq-row"><span>CPU</span><span>i5-8400</span></div>
+                  <div class="sysreq-row"><span>GPU</span><span>GTX 1060 6GB</span></div>
+                  <div class="sysreq-row"><span>RAM</span><span>8 GB</span></div>
+                  <div class="sysreq-row"><span>Storage</span><span>10 GB SSD</span></div>
                 </div>
                 <div class="sysreq-col">
-                  <div class="sysreq-title" data-i18n="dd_rec_req">Recommended Requirements</div>
-                  <div class="sysreq-row"><span data-i18n="dd_os">OS</span><span>Windows 11 64-bit</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_cpu">Processor</span><span>Intel Core i7-10700K</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_gpu">Graphics Card</span><span>NVIDIA RTX 3060</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_ram">RAM</span><span>16 GB</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_ssd">Storage</span><span>10 GB SSD</span></div>
+                  <div class="sysreq-title">Recommended</div>
+                  <div class="sysreq-row"><span>OS</span><span>Win 11 64-bit</span></div>
+                  <div class="sysreq-row"><span>CPU</span><span>i7-10700K</span></div>
+                  <div class="sysreq-row"><span>GPU</span><span>RTX 3060</span></div>
+                  <div class="sysreq-row"><span>RAM</span><span>16 GB</span></div>
+                  <div class="sysreq-row"><span>Storage</span><span>10 GB SSD</span></div>
                 </div>
               </div>
               <div class="dropdown-row dropdown-row--download">
-                <a href="#" class="dropdown-download-btn" target="_blank" data-i18n="dd_download">
+                <a href="#" class="dropdown-download-btn" target="_blank">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M5 20h14v-2H5v2zm7-18v12l-5-5-1.41 1.41L12 17l6.41-6.59L17 9l-5 5V2h-2z"/></svg>
-                  <span data-i18n="dd_download_text">Download Game</span>
+                  Download Game
                 </a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- ── Game 2: Jurig Jiwa Nu Leungit ── -->
+        <!-- Game 2: Jurig Jiwa -->
         <div class="project-card" data-category="game">
           <div class="project-mockups">
             <img src="img/jurig_1.png" alt="Jurig Screen 1" class="mockup-img zoomable" />
@@ -404,43 +449,46 @@
             <img src="img/jurig_3.png" alt="Jurig Screen 3" class="mockup-img zoomable" />
           </div>
           <div class="project-info">
-            <span class="project-tag">Game Development</span>
+            <div class="project-meta">
+              <span class="project-tag project-tag--game">Game Dev</span>
+              <span class="project-year">2024</span>
+            </div>
             <h3>Jurig Jiwa Nu Leungit <span class="project-type">(Unreal Engine 5)</span></h3>
-            <p data-i18n="p9_desc">Game 3D Horror lokal dengan cerita pesugihan yang berakhir mengenaskan bagi keluarga Bayu, Game ini merupakan projek lomba Hology 7.0 yang di selenggarakan oleh Universitas Brawijaya pada tahun 2024.</p>
+            <p data-i18n="p9_desc">Game 3D Horror lokal bercerita tentang pesugihan berakhir tragis. Lomba Hology 7.0 – Universitas Brawijaya 2024.</p>
             <button class="project-dropdown-toggle" aria-expanded="false">
-              <span data-i18n="detail_link">Lihat Detail</span>
+              <span>Lihat Detail</span>
               <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="project-dropdown" data-type="game">
               <div class="sysreq-grid">
                 <div class="sysreq-col">
-                  <div class="sysreq-title" data-i18n="dd_min_req">Minimum Requirements</div>
-                  <div class="sysreq-row"><span data-i18n="dd_os">OS</span><span>Windows 10 64-bit</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_cpu">Processor</span><span>Intel Core i5-8400</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_gpu">Graphics Card</span><span>NVIDIA GTX 1060 6GB</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_ram">RAM</span><span>8 GB</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_ssd">Storage</span><span>10 GB SSD</span></div>
+                  <div class="sysreq-title">Minimum</div>
+                  <div class="sysreq-row"><span>OS</span><span>Win 10 64-bit</span></div>
+                  <div class="sysreq-row"><span>CPU</span><span>i5-8400</span></div>
+                  <div class="sysreq-row"><span>GPU</span><span>GTX 1060 6GB</span></div>
+                  <div class="sysreq-row"><span>RAM</span><span>8 GB</span></div>
+                  <div class="sysreq-row"><span>Storage</span><span>10 GB SSD</span></div>
                 </div>
                 <div class="sysreq-col">
-                  <div class="sysreq-title" data-i18n="dd_rec_req">Recommended Requirements</div>
-                  <div class="sysreq-row"><span data-i18n="dd_os">OS</span><span>Windows 11 64-bit</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_cpu">Processor</span><span>Intel Core i7-10700K</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_gpu">Graphics Card</span><span>NVIDIA RTX 3060</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_ram">RAM</span><span>16 GB</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_ssd">Storage</span><span>10 GB SSD</span></div>
+                  <div class="sysreq-title">Recommended</div>
+                  <div class="sysreq-row"><span>OS</span><span>Win 11 64-bit</span></div>
+                  <div class="sysreq-row"><span>CPU</span><span>i7-10700K</span></div>
+                  <div class="sysreq-row"><span>GPU</span><span>RTX 3060</span></div>
+                  <div class="sysreq-row"><span>RAM</span><span>16 GB</span></div>
+                  <div class="sysreq-row"><span>Storage</span><span>10 GB SSD</span></div>
                 </div>
               </div>
               <div class="dropdown-row dropdown-row--download">
                 <a href="https://drive.google.com/drive/folders/13mLicJ_2n0_N6vzwlxLpZ1F8Uv6TgNwZ?usp=drive_link" class="dropdown-download-btn" target="_blank">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M5 20h14v-2H5v2zm7-18v12l-5-5-1.41 1.41L12 17l6.41-6.59L17 9l-5 5V2h-2z"/></svg>
-                  <span data-i18n="dd_download_text">Download Game</span>
+                  Download Game
                 </a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- ── Game 3: The Heritage ── -->
+        <!-- Game 3: The Heritage -->
         <div class="project-card" data-category="game">
           <div class="project-mockups">
             <img src="img/Foto_1.png" alt="The Heritage Screen 1" class="mockup-img zoomable" />
@@ -448,43 +496,46 @@
             <img src="img/Foto_3.png" alt="The Heritage Screen 3" class="mockup-img zoomable" />
           </div>
           <div class="project-info">
-            <span class="project-tag">Game Development</span>
+            <div class="project-meta">
+              <span class="project-tag project-tag--game">Game Dev</span>
+              <span class="project-badge-award">🥇 Juara 1</span>
+            </div>
             <h3>The Heritage <span class="project-type">(Cursed Bloodline)</span></h3>
-            <p data-i18n="p10_desc">Game 3D Horror lowpoly yang mengisahkan mahasiswa muda yang kos di Jakarta mendapat telepon bahwa terjadi hal buruk dengan keluarganya dan harus pulang ke kampung halaman, namun ia tidak hanya menemukan hal mengerikan tetapi harus menyelesaikannya agar kutukan berakhir. Game ini merupakan projek lomba IT FEST yang diselenggarakan oleh Universitas Paramadina pada tahun 2025 dan menjuari peringkat pertama.</p>
+            <p data-i18n="p10_desc">Game 3D Horror lowpoly tentang kutukan keluarga. Juara 1 IT Fest Universitas Paramadina 2025.</p>
             <button class="project-dropdown-toggle" aria-expanded="false">
-              <span data-i18n="detail_link">Lihat Detail</span>
+              <span>Lihat Detail</span>
               <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="project-dropdown" data-type="game">
               <div class="sysreq-grid">
                 <div class="sysreq-col">
-                  <div class="sysreq-title" data-i18n="dd_min_req">Minimum Requirements</div>
-                  <div class="sysreq-row"><span data-i18n="dd_os">OS</span><span>Windows 10 64 bit / Windows 11 64 Bit Compatible</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_cpu">Processor</span><span>Intel i5 3570 / AMD Ryzen 5 1400 4 Cores 4 Threads 3,5Ghz</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_gpu">Graphics Card</span><span> Nvidia Geforce GTX 1050/ AMD Radeon RX 550 2GBvram GDDR5</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_ram">RAM</span><span>8 GB</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_ssd">Storage</span><span>3 GB SSD</span></div>
+                  <div class="sysreq-title">Minimum</div>
+                  <div class="sysreq-row"><span>OS</span><span>Win 10/11 64-bit</span></div>
+                  <div class="sysreq-row"><span>CPU</span><span>i5-3570 / Ryzen 5 1400</span></div>
+                  <div class="sysreq-row"><span>GPU</span><span>GTX 1050 / RX 550</span></div>
+                  <div class="sysreq-row"><span>RAM</span><span>8 GB</span></div>
+                  <div class="sysreq-row"><span>Storage</span><span>3 GB SSD</span></div>
                 </div>
                 <div class="sysreq-col">
-                  <div class="sysreq-title" data-i18n="dd_rec_req">Recommended Requirements</div>
-                  <div class="sysreq-row"><span data-i18n="dd_os">OS</span><span>Windows 10 64 bit / Windows 11 64 bit Compatible</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_cpu">Processor</span><span>Intel i7 4970 / AMD Ryzen 7 1700X 4 Cores 8 Threads 4,0 Ghz</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_gpu">Graphics Card</span><span> Nvidia Geforce GTX 1060/1650 Super / AMD Radeon RX 570 4 GBvram GDDR5</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_ram">RAM</span><span>16 GB</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_ssd">Storage</span><span>3 GB SSD</span></div>
+                  <div class="sysreq-title">Recommended</div>
+                  <div class="sysreq-row"><span>OS</span><span>Win 10/11 64-bit</span></div>
+                  <div class="sysreq-row"><span>CPU</span><span>i7-4970 / Ryzen 7 1700X</span></div>
+                  <div class="sysreq-row"><span>GPU</span><span>GTX 1060/1650 Super</span></div>
+                  <div class="sysreq-row"><span>RAM</span><span>16 GB</span></div>
+                  <div class="sysreq-row"><span>Storage</span><span>3 GB SSD</span></div>
                 </div>
               </div>
               <div class="dropdown-row dropdown-row--download">
                 <a href="https://gamejolt.com/games/perjanjiangaib/997572" class="dropdown-download-btn" target="_blank">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M5 20h14v-2H5v2zm7-18v12l-5-5-1.41 1.41L12 17l6.41-6.59L17 9l-5 5V2h-2z"/></svg>
-                  <span data-i18n="dd_download_text">Download Game</span>
+                  Download Game
                 </a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- ── Game 4: Demit ── -->
+        <!-- Game 4: Demit -->
         <div class="project-card" data-category="game">
           <div class="project-mockups">
             <img src="img/Gambar_1.png" alt="Demit Screen 1" class="mockup-img zoomable" />
@@ -492,36 +543,39 @@
             <img src="img/Gambar_3.png" alt="Demit Screen 3" class="mockup-img zoomable" />
           </div>
           <div class="project-info">
-            <span class="project-tag">Game Development</span>
+            <div class="project-meta">
+              <span class="project-tag project-tag--game">Game Dev</span>
+              <span class="project-year">2024</span>
+            </div>
             <h3>Demit <span class="project-type">(3D Horror)</span></h3>
-            <p data-i18n="p11_desc">Game 3D Horror yang berkisah tentang seorang mahasiswa yang ingin mencari tempat tinggal murah dengan kisah kelam di baliknya. Tempat itu dahulu dijadikan penjara untuk budak perempuan yang memberontak pada zaman Belanda.</p>
+            <p data-i18n="p11_desc">Game 3D Horror tentang mahasiswa yang menemukan tempat tinggal murah dengan sejarah kelam era kolonial Belanda.</p>
             <button class="project-dropdown-toggle" aria-expanded="false">
-              <span data-i18n="detail_link">Lihat Detail</span>
+              <span>Lihat Detail</span>
               <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="project-dropdown" data-type="game">
               <div class="sysreq-grid">
                 <div class="sysreq-col">
-                  <div class="sysreq-title" data-i18n="dd_min_req">Minimum Requirements</div>
-                  <div class="sysreq-row"><span data-i18n="dd_os">OS</span><span>Windows 10 64 bit / Windows 11 64 Bit Compatible</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_cpu">Processor</span><span>Intel i5 6600K / AMD Ryzen 5 2600 4 Cores 4 Threads 3,5Ghz</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_gpu">Graphics Card</span><span>Nvidia Geforce GTX 1060 / AMD Radeon RX 580 6 GBvram GDDR5</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_ram">RAM</span><span>8 GB</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_ssd">Storage</span><span>6 GB SSD</span></div>
+                  <div class="sysreq-title">Minimum</div>
+                  <div class="sysreq-row"><span>OS</span><span>Win 10/11 64-bit</span></div>
+                  <div class="sysreq-row"><span>CPU</span><span>i5-6600K / Ryzen 5 2600</span></div>
+                  <div class="sysreq-row"><span>GPU</span><span>GTX 1060 / RX 580</span></div>
+                  <div class="sysreq-row"><span>RAM</span><span>8 GB</span></div>
+                  <div class="sysreq-row"><span>Storage</span><span>6 GB SSD</span></div>
                 </div>
                 <div class="sysreq-col">
-                  <div class="sysreq-title" data-i18n="dd_rec_req">Recommended Requirements</div>
-                  <div class="sysreq-row"><span data-i18n="dd_os">OS</span><span>Windows 10 64 bit / Windows 11 64 Bit Compatible</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_cpu">Processor</span><span>Intel i7 7700K / AMD Ryzen 7 1700X 8 Cores 8 Threads 4,0 Ghz</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_gpu">Graphics Card</span><span>Nvidia Geforce GTX 1080 / RTX 2060 Super / AMD Radeon RX 5700 XT 8 GBvram GDDR5</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_ram">RAM</span><span>16 GB</span></div>
-                  <div class="sysreq-row"><span data-i18n="dd_ssd">Storage</span><span>6 GB SSD</span></div>
+                  <div class="sysreq-title">Recommended</div>
+                  <div class="sysreq-row"><span>OS</span><span>Win 10/11 64-bit</span></div>
+                  <div class="sysreq-row"><span>CPU</span><span>i7-7700K / Ryzen 7 1700X</span></div>
+                  <div class="sysreq-row"><span>GPU</span><span>GTX 1080 / RTX 2060 Super</span></div>
+                  <div class="sysreq-row"><span>RAM</span><span>16 GB</span></div>
+                  <div class="sysreq-row"><span>Storage</span><span>6 GB SSD</span></div>
                 </div>
               </div>
               <div class="dropdown-row dropdown-row--download">
                 <a href="https://gamejolt.com/games/demithorrorgame/907891" class="dropdown-download-btn" target="_blank">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M5 20h14v-2H5v2zm7-18v12l-5-5-1.41 1.41L12 17l6.41-6.59L17 9l-5 5V2h-2z"/></svg>
-                  <span data-i18n="dd_download_text">Download Game</span>
+                  Download Game
                 </a>
               </div>
             </div>
@@ -532,69 +586,73 @@
     </div>
   </section>
 
-  <!-- ─── PENDIDIKAN ──────────────────────────────────────────── -->
+  <!-- PENDIDIKAN -->
   <section class="section edu-section" id="pendidikan">
     <div class="container">
-      <div class="section-label" data-i18n="edu_label">RIWAYAT PENDIDIKAN</div>
-      <h2 class="section-title" data-i18n="edu_title">Pernah dan Sedang Belajar pada<br>Program dan Institusi Berikut</h2>
+      <div class="section-header">
+        <div class="section-label" data-i18n="edu_label">RIWAYAT PENDIDIKAN</div>
+        <h2 class="section-title" data-i18n="edu_title">Latar Belakang<br>Pendidikan</h2>
+      </div>
 
-      <div class="edu-grid">
+      <div class="edu-timeline">
         <div class="edu-card">
           <div class="edu-logo-wrap">
-            <img src="img/logo_ubm.png" alt="Logo Universitas Bunda Mulia" class="edu-logo-img zoomable" />
+            <img src="img/logo_ubm.png" alt="Universitas Bunda Mulia" class="edu-logo-img zoomable" />
           </div>
           <div class="edu-info">
+            <span class="edu-year-badge">2023 – 2027</span>
             <span class="edu-level" data-i18n="edu_univ">Perguruan Tinggi</span>
             <h4>Universitas Bunda Mulia</h4>
             <p data-i18n="edu_univ_prog">Sistem Informasi</p>
-            <span class="edu-year">2023 – 2027</span>
           </div>
         </div>
 
         <div class="edu-card">
           <div class="edu-logo-wrap">
-            <img src="img/logo_smk.jpg" alt="Logo SMK Dhammasavana" class="edu-logo-img zoomable" />
+            <img src="img/logo_smk.jpg" alt="SMK Dhammasavana" class="edu-logo-img zoomable" />
           </div>
           <div class="edu-info">
+            <span class="edu-year-badge">2020 – 2023</span>
             <span class="edu-level" data-i18n="edu_smk">SMK / Sederajat</span>
             <h4>SMK Dhammasavana</h4>
             <p data-i18n="edu_smk_prog">Akuntansi Keuangan dan Lembaga</p>
-            <span class="edu-year">2020 – 2023</span>
           </div>
         </div>
 
         <div class="edu-card">
           <div class="edu-logo-wrap">
-            <img src="img/logo_smk.jpg" alt="Logo SMP Dhammasavana" class="edu-logo-img zoomable" />
+            <img src="img/logo_smk.jpg" alt="SMP Dhammasavana" class="edu-logo-img zoomable" />
           </div>
           <div class="edu-info">
+            <span class="edu-year-badge">2017 – 2020</span>
             <span class="edu-level" data-i18n="edu_smp">SMP / Sederajat</span>
             <h4>SMP Dhammasavana</h4>
             <p data-i18n="edu_smp_prog">Program Reguler</p>
-            <span class="edu-year">2017 – 2020</span>
           </div>
         </div>
 
         <div class="edu-card">
           <div class="edu-logo-wrap">
-            <img src="img/logo_sd.png" alt="Logo SD Budhidaya" class="edu-logo-img zoomable" />
+            <img src="img/logo_sd.png" alt="SD Budhidaya" class="edu-logo-img zoomable" />
           </div>
           <div class="edu-info">
+            <span class="edu-year-badge">2011 – 2017</span>
             <span class="edu-level" data-i18n="edu_sd">SD / Sederajat</span>
             <h4>SD Budhidaya</h4>
             <p data-i18n="edu_sd_prog">Program Reguler</p>
-            <span class="edu-year">2011 – 2017</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── PENGALAMAN ──────────────────────────────────────────── -->
+  <!-- PENGALAMAN -->
   <section class="section exp-section" id="pengalaman">
     <div class="container">
-      <div class="section-label" data-i18n="exp_label">PENGALAMAN</div>
-      <h2 class="section-title" data-i18n="exp_title">Pengalaman Lomba, Organisasi<br>dan Praktik Kerja Lapangan</h2>
+      <div class="section-header">
+        <div class="section-label" data-i18n="exp_label">PENGALAMAN</div>
+        <h2 class="section-title" data-i18n="exp_title">Lomba, Organisasi<br>&amp; Pengalaman Kerja</h2>
+      </div>
 
       <div class="exp-tabs">
         <button class="exp-tab active" data-tab="lomba" data-i18n="tab_lomba">Lomba</button>
@@ -604,7 +662,6 @@
 
       <!-- Lomba -->
       <div class="exp-content active" id="tab-lomba">
-
         <div class="exp-card expandable">
           <div class="exp-img-wrap">
             <img src="img/io_fest.jpg" alt="I/O Fest 2024" class="exp-photo zoomable" />
@@ -612,10 +669,13 @@
           <div class="exp-body">
             <span class="exp-tag" data-i18n="tag_national">Lomba Nasional</span>
             <h3 data-i18n="lomba1_name">Lomba Game Development I/O Fest 2024<br><small>Universitas Tarumanegara</small></h3>
-            <p class="exp-achievement" data-i18n="lomba1_result">Juara 3 &amp; Juara Favorit</p>
+            <p class="exp-achievement">
+              <span class="achievement-badge">🏆 Juara 3</span>
+              <span class="achievement-badge">⭐ Juara Favorit</span>
+            </p>
             <button class="exp-toggle" data-i18n="see_more">Lihat Selengkapnya</button>
             <div class="exp-detail">
-              <p data-i18n="lomba1_desc">Lomba I/O Fest merupakan lomba nasional tahunan yang diselenggarakan oleh Universitas Tarumanegara. Pada tahun 2024 mengusung tema lokal, sehingga saya membuat game 3D lokal bergenre horror yang bercerita tentang seorang anak yang diculik wewe gombel dan harus menyelamatkan diri, dengan mekanik seperti game Granny (Puzzle Solving dan Escaping).</p>
+              <p data-i18n="lomba1_desc">Lomba I/O Fest merupakan lomba nasional tahunan yang diselenggarakan oleh Universitas Tarumanegara. Pada tahun 2024 mengusung tema lokal, membuat game 3D horror tentang anak yang diculik wewe gombel dengan mekanik puzzle solving dan escaping.</p>
               <p class="exp-doc-label" data-i18n="doc_label">Dokumentasi</p>
               <div class="exp-docs">
                 <img src="img/IMG_2323.jpg" alt="Dokumentasi I/O Fest 1" class="exp-doc-img zoomable" />
@@ -632,11 +692,13 @@
           </div>
           <div class="exp-body">
             <span class="exp-tag" data-i18n="tag_national">Lomba Nasional</span>
-            <h3 data-i18n="lomba2_name">Lomba Game Making IT Fest 2025</h3>
-            <p class="exp-achievement" data-i18n="lomba2_result">Juara 1 – Game Terbaik</p>
+            <h3 data-i18n="lomba2_name">Lomba Game Making IT Fest 2025<br><small>Universitas Paramadina</small></h3>
+            <p class="exp-achievement">
+              <span class="achievement-badge achievement-badge--gold">🥇 Juara 1 – Game Terbaik</span>
+            </p>
             <button class="exp-toggle" data-i18n="see_more">Lihat Selengkapnya</button>
             <div class="exp-detail">
-              <p data-i18n="lomba2_desc">IT Fest merupakan kompetisi tahunan di bidang teknologi dan inovasi. Pada tahun 2025 dalam kategori Game Making, saya berhasil meraih Juara 1 sekaligus penghargaan Game Terbaik atas game yang dikembangkan selama kompetisi berlangsung.</p>
+              <p data-i18n="lomba2_desc">IT Fest merupakan kompetisi tahunan di bidang teknologi dan inovasi. Pada tahun 2025 dalam kategori Game Making, berhasil meraih Juara 1 sekaligus penghargaan Game Terbaik.</p>
               <p class="exp-doc-label" data-i18n="doc_label">Dokumentasi</p>
               <div class="exp-docs">
                 <img src="img/Lomba_1.jpeg" alt="Dokumentasi IT Fest 1" class="exp-doc-img zoomable" />
@@ -646,7 +708,6 @@
             </div>
           </div>
         </div>
-
       </div>
 
       <!-- Organisasi -->
@@ -658,12 +719,12 @@
           <div class="exp-body">
             <span class="exp-tag" data-i18n="tag_org">Organisasi Kampus</span>
             <h3>HIMSI – Himpunan Mahasiswa Sistem Informasi</h3>
-            <p class="exp-period"><span data-i18n="period_label">Periode:</span> 2025 – 2026 &nbsp;|&nbsp; <span data-i18n="himsi_role">Koordinator Desain (Design Co.)</span></p>
+            <p class="exp-period"><span>Periode:</span> 2025 – 2026 &nbsp;·&nbsp; <span>Koordinator Desain (Design Co.)</span></p>
             <ul class="exp-duties">
-              <li data-i18n="himsi_d1">Memastikan standar desain sesuai tema/topik acara.</li>
-              <li data-i18n="himsi_d2">Membuat konten feed &amp; story Instagram (Poster, Feed Edukasi, dll).</li>
-              <li data-i18n="himsi_d3">Mengarahkan anggota tim dengan ide dan solusi desain.</li>
-              <li data-i18n="himsi_d4">Memastikan feed tidak mengalami typo dan inkonsistensi desain.</li>
+              <li>Memastikan standar desain sesuai tema/topik acara.</li>
+              <li>Membuat konten feed &amp; story Instagram (Poster, Feed Edukasi, dll).</li>
+              <li>Mengarahkan anggota tim dengan ide dan solusi desain.</li>
+              <li>Memastikan feed tidak mengalami typo dan inkonsistensi desain.</li>
             </ul>
           </div>
         </div>
@@ -676,14 +737,14 @@
             <img src="img/PKL_1.jpeg" alt="PT Bet Obaja International" class="exp-photo zoomable" />
           </div>
           <div class="exp-body">
-            <span class="exp-tag" data-i18n="tag_pkls">Praktik Kerja Lapangan</span>
-            <h3>PT Bet Obaja International <small data-i18n="travel">(Tour Travel)</small></h3>
-            <p class="exp-period">01 Des 2022 – 01 Mar 2023 &nbsp;|&nbsp; <span data-i18n="obaja_role">Staff Accounting &amp; Finance</span></p>
+            <span class="exp-tag">Praktik Kerja Lapangan</span>
+            <h3>PT Bet Obaja International <small>(Tour Travel)</small></h3>
+            <p class="exp-period">01 Des 2022 – 01 Mar 2023 &nbsp;·&nbsp; Staff Accounting &amp; Finance</p>
             <ul class="exp-duties">
-              <li data-i18n="obaja_d1">Membuat Purchasing Invoice tiket perjalanan.</li>
-              <li data-i18n="obaja_d2">Membuat billing collection / tagihan perusahaan.</li>
-              <li data-i18n="obaja_d3">Mengelola pajak PPh 21 dan 23.</li>
-              <li data-i18n="obaja_d4">Melakukan Filling Document dan proses refund transaksi.</li>
+              <li>Membuat Purchasing Invoice tiket perjalanan.</li>
+              <li>Membuat billing collection / tagihan perusahaan.</li>
+              <li>Mengelola pajak PPh 21 dan 23.</li>
+              <li>Melakukan Filling Document dan proses refund transaksi.</li>
             </ul>
           </div>
         </div>
@@ -692,14 +753,14 @@
             <img src="img/youtube_1.png" alt="YouTube Content Creator" class="exp-photo zoomable" />
           </div>
           <div class="exp-body">
-            <span class="exp-tag" data-i18n="tag_creator">Content Creator</span>
-            <h3>YouTube – <span data-i18n="yt_title">Gaming Content Creator</span></h3>
-            <p class="exp-period">14 Sep 2019 – <span data-i18n="now">Sekarang</span></p>
+            <span class="exp-tag">Content Creator</span>
+            <h3>YouTube – Gaming Content Creator</h3>
+            <p class="exp-period">14 Sep 2019 – Sekarang</p>
             <ul class="exp-duties">
-              <li data-i18n="yt_d1">Membuat konten gaming harian (record gameplay dengan OBS).</li>
-              <li data-i18n="yt_d2">Melakukan live streaming dengan OBS.</li>
-              <li data-i18n="yt_d3">Melakukan pengeditan konten video.</li>
-              <li data-i18n="yt_d4">Memastikan konten layak dipublikasikan.</li>
+              <li>Membuat konten gaming harian (record gameplay dengan OBS).</li>
+              <li>Melakukan live streaming dengan OBS.</li>
+              <li>Melakukan pengeditan konten video.</li>
+              <li>Memastikan konten layak dipublikasikan.</li>
             </ul>
           </div>
         </div>
@@ -707,70 +768,93 @@
     </div>
   </section>
 
-  <!-- ─── KONTAK ──────────────────────────────────────────────── -->
+  <!-- KONTAK -->
   <section class="section kontak-section" id="kontak">
     <div class="container">
-      <div class="section-label" data-i18n="contact_label">KONTAK SAYA</div>
-      <h2 class="section-title" data-i18n="contact_title">Hubungi Saya</h2>
-      <p class="kontak-desc" data-i18n="contact_desc">Saya selalu terbuka untuk kolaborasi, diskusi proyek, atau peluang profesional baru. Jangan ragu untuk menghubungi saya!</p>
-      <div class="social-links social-links-lg">
-                <a href="https://wa.me/628979354860" class="social-link" title="WhatsApp" target="_blank">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
-          </svg>
-        </a>
-        <a href="mailto:marcellinonatanael74@gmail.com" class="social-link" title="Email"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
-        <a href="https://www.linkedin.com/in/marcellino-natanael-929b44334?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-link" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-        <a href="https://github.com/MarcellinoNatanael" target="_blank" class="social-link" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
-        <a href="https://www.instagram.com/itsarcellz?igsh=dHJib2FmN2I0OW42" target="_blank" class="social-link" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-        <a href="https://www.youtube.com/channel/UCigRX1l8qcdL5e3IaI_ev9g" target="_blank" class="social-link" title="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
-        <a href="https://www.threads.com/@itsarcellz" target="_blank" class="social-link" title="Threads"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.028-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.378-.888h-.015c-.845 0-1.994.232-2.728 1.154l-1.593-1.24c.933-1.2 2.418-1.866 4.32-1.866h.023c3.016.018 4.822 1.902 5.07 5.31.285.046.57.1.854.165 1.558.38 2.794 1.163 3.567 2.272 1.012 1.444 1.116 3.454.28 5.365C20.12 22.57 17.335 24 12.186 24z"/></svg></a>
+      <div class="kontak-inner">
+        <div class="kontak-left">
+          <div class="section-label">KONTAK SAYA</div>
+          <h2 class="section-title">Mari Berkolaborasi<br><em>Bersama</em></h2>
+          <p class="kontak-desc">Saya selalu terbuka untuk kolaborasi, diskusi proyek, atau peluang profesional baru. Jangan ragu untuk menghubungi saya!</p>
+          <a href="mailto:marcellinonatanael74@gmail.com" class="kontak-email-link">
+            marcellinonatanael74@gmail.com
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg>
+          </a>
+        </div>
+        <div class="kontak-right">
+          <div class="social-grid">
+            <a href="https://wa.me/628979354860" class="social-card" title="WhatsApp" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="sc-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+            <a href="mailto:marcellinonatanael74@gmail.com" class="social-card" title="Email">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="sc-icon"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <span>Email</span>
+            </a>
+            <a href="https://www.linkedin.com/in/marcellino-natanael-929b44334" target="_blank" class="social-card" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="sc-icon"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/MarcellinoNatanael" target="_blank" class="social-card" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="sc-icon"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.instagram.com/itsarcellz" target="_blank" class="social-card" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="sc-icon"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.youtube.com/channel/UCigRX1l8qcdL5e3IaI_ev9g" target="_blank" class="social-card" title="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="sc-icon"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+              <span>YouTube</span>
+            </a>
+            <a href="https://www.threads.com/@itsarcellz" target="_blank" class="social-card" title="Threads">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="sc-icon"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.028-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.378-.888h-.015c-.845 0-1.994.232-2.728 1.154l-1.593-1.24c.933-1.2 2.418-1.866 4.32-1.866h.023c3.016.018 4.822 1.902 5.07 5.31.285.046.57.1.854.165 1.558.38 2.794 1.163 3.567 2.272 1.012 1.444 1.116 3.454.28 5.365C20.12 22.57 17.335 24 12.186 24z"/></svg>
+              <span>Threads</span>
+            </a>
+          </div>
+        </div>
       </div>
-      <p class="kontak-email">marcellinonatanael74@gmail.com</p>
     </div>
   </section>
 
-  <!-- ─── FOOTER ──────────────────────────────────────────────── -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-col footer-brand">
         <div class="footer-logo">
+          <span class="footer-logo-mark">MN</span>
           <span>Marcellino Natanael</span>
         </div>
-        <p data-i18n="footer_contact_me">Hubungi saya</p>
+        <p>UI/UX Designer &amp; Full-Stack Developer</p>
         <a href="mailto:marcellinonatanael74@gmail.com" class="footer-email">marcellinonatanael74@gmail.com</a>
-        <div class="social-links footer-socials">
-          <a href="tel:+62" class="social-link sm" title="Telepon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a>
-          <a href="mailto:marcellinonatanael74@gmail.com" class="social-link sm" title="Email"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
-          <a href="https://github.com" target="_blank" class="social-link sm" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
-          <a href="https://instagram.com" target="_blank" class="social-link sm" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-        </div>
       </div>
       <div class="footer-col">
-        <h5 data-i18n="footer_menu">Menu</h5>
+        <h5>Navigasi</h5>
         <ul>
-          <li><a href="#beranda"    data-i18n="nav_home">Beranda</a></li>
-          <li><a href="#tentang"   data-i18n="nav_about">Tentang Saya</a></li>
-          <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
-          <li><a href="#pendidikan" data-i18n="nav_edu">Pendidikan</a></li>
-          <li><a href="#pengalaman" data-i18n="nav_exp">Pengalaman</a></li>
-          <li><a href="#artikel"   data-i18n="nav_article">Artikel</a></li>
-          <li><a href="#kontak"    data-i18n="nav_contact">Kontak</a></li>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#tentang">Tentang Saya</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#pendidikan">Pendidikan</a></li>
+          <li><a href="#pengalaman">Pengalaman</a></li>
+          <li><a href="#kontak">Kontak</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5 data-i18n="footer_cat">Kategori Tulisan</h5>
+        <h5>Keahlian</h5>
         <ul>
-          <li><a href="#">Programming</a></li>
-          <li><a href="#" data-i18n="cat_tech">Teknologi</a></li>
-          <li><a href="#" data-i18n="cat_life">Gaya Hidup</a></li>
           <li><a href="#">UI/UX Design</a></li>
+          <li><a href="#">Web Development</a></li>
           <li><a href="#">Game Development</a></li>
+          <li><a href="#">Figma</a></li>
+          <li><a href="#">Laravel / PHP</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span id="copyrightYear"></span> Marcellino Natanael. <span data-i18n="copyright">All rights reserved.</span></p>
+      <p>© <span id="copyrightYear"></span> Marcellino Natanael. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <span>Designed &amp; Built with ❤️</span>
+      </div>
     </div>
   </footer>
 
