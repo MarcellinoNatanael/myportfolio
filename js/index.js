@@ -6,101 +6,65 @@
 /* ── TRANSLATIONS ──────────────────────────────────────────── */
 const translations = {
   id: {
-    nav_home:'Beranda', nav_about:'Tentang', nav_portfolio:'Portfolio',
+    nav_home:'Beranda', nav_about:'Tentang', nav_portfolio:'Portofolio',
     nav_edu:'Pendidikan', nav_exp:'Pengalaman', nav_contact:'Kontak',
-    hero_badge:'UI/UX Designer & Full-Stack Developer',
-    hero_greeting:'Halo, Perkenalkan',
-    hero_iam:'Saya',
-    hero_desc:'UI/UX Designer dan Full-Stack Web Developer. Portofolio ini menampilkan proyek dan kontribusi saya sebagai pengembang di bidang teknologi dan desain.',
-    hero_btn_contact:'Hubungi Saya', hero_btn_portfolio:'Lihat Portfolio',
+    hero_badge:'UI/UX Designer',
+    hero_btn_contact:'Hubungi Saya', hero_btn_portfolio:'Lihat Portofolio',
     about_label:'TENTANG SAYA',
-    about_title:'UI/UX Design & Full-Stack Developer',
-    about_bio:'Perkenalkan, saya <strong>Marcellino Natanael</strong>, mahasiswa akhir program studi Sistem Informasi semester 7 Universitas Bunda Mulia Ancol.',
-    skill_main_title:'Keahlian Utama',
-    skill_main_desc:'Spesialis perancangan antarmuka menggunakan Figma dan pengembangan sistem dengan PHP framework Laravel.',
-    contrib_title:'Kontribusi Profesional',
-    contrib_desc:'Bertanggung jawab penuh atas seluruh siklus pengembangan sistem informasi perusahaan.',
-    port_label:'PROYEK', port_title:'Proyek yang Pernah Saya Kembangkan',
-    filter_all:'Semua',
-    p1_type:'(Desain Aplikasi Mobile)', p1_desc:'Aplikasi pelacakan olahraga harian dengan integrasi AI yang canggih.',
-    p2_type:'(Desain Aplikasi Mobile)', p2_desc:'Aplikasi daur ulang sampah dengan sistem reward poin.',
-    p3_type:'(Desain Aplikasi Mobile)', p3_desc:'Super app Ciputra — pencarian rumah, tagihan, dan transaksi dalam satu aplikasi.',
-    p4_type:'(Desain Aplikasi Mobile)', p4_desc:'Aplikasi kursus padel dengan sistem manajemen pengetahuan bersama coach dan komunitas.',
-    p5_type:'(Desain Aplikasi Mobile)', p5_desc:'Aplikasi penggalangan donasi untuk korban bencana.',
-    p6_type:'(Web Development)', p6_desc:'Sistem administrasi CRUD untuk PT Karisma Dinamika Purwa.',
-    p7_type:'(Web Development)', p7_desc:'Sistem Pendukung Keputusan dengan algoritma SAW untuk prioritas aset lelang.',
-    p8_desc:'Game 3D horror lokal tentang anak yang diculik wewe gombel. Juara 3 & Favorit I/O Fest 2024.',
-    p9_desc:'Game 3D Horror lokal dengan cerita pesugihan berakhir tragis. Hology 7.0 – Universitas Brawijaya 2024.',
-    p10_desc:'Game 3D Horror lowpoly tentang kutukan keluarga. Juara 1 IT Fest Universitas Paramadina 2025.',
-    p11_desc:'Game 3D Horror tentang mahasiswa dan tempat tinggal murah dengan sejarah kelam era kolonial.',
+    about_bio:'Hi, Saya Marcellino Natanael! Sebagai seorang UI/UX Designer, saya percaya bahwa desain yang baik bukan hanya sekedar visual yang cantik, tapi bagaimana desain tersebut dapat menjawab dan menyelesaikan permasalahan yang dibutuhkan pengguna. Dengan keahlian dibidang riset user, wireframing, hingga prototyping di Figma, saya mampu merancang desain antar muka aplikasi mobile maupun website berdasarkan kebutuhan pengguna yang modern, interaktif dan intuitif.',
+    skill_title:'Keahlian',
+    port_label:'PORTOFOLIO',
+    filter_mobile:'Mobile', filter_website:'Website', filter_game:'Game',
     detail_link:'Lihat Detail',
-    dd_figma:'Figma Design', dd_open_figma:'Buka di Figma →',
-    dd_proto:'Prototype', dd_open_proto:'Buka Prototype →',
-    dd_framework:'Framework', dd_lang:'Bahasa Pemrograman',
-    dd_db:'Database', dd_method:'Metode',
-    dd_min_req:'Minimum', dd_rec_req:'Recommended',
+    detail_back:'Kembali ke Portofolio',
+    detail_panel_title:'Detail Project', detail_game_panel_title:'Detail Game',
+    detail_device:'Tipe Perangkat', detail_year:'Tahun', detail_desc_title:'Deskripsi Project',
+    detail_method:'Metode', detail_figma:'Link Figma', detail_open_figma:'Buka di Figma →',
+    detail_genre:'Genre', detail_release_year:'Tahun Rilis', detail_game_desc_title:'Deskripsi Game',
+    detail_requirements:'Requirements Game', dd_min_req:'Minimum', dd_rec_req:'Recommended',
     dd_os:'OS', dd_cpu:'Processor', dd_gpu:'GPU', dd_ram:'RAM', dd_ssd:'Storage',
-    dd_download_text:'Download Game',
+    dd_download_text:'Download di Gamejolt',
     edu_label:'RIWAYAT PENDIDIKAN', edu_title:'Latar Belakang Pendidikan',
     edu_univ:'Perguruan Tinggi', edu_univ_prog:'Sistem Informasi',
     edu_smk:'SMK / Sederajat', edu_smk_prog:'Akuntansi Keuangan dan Lembaga',
     edu_smp:'SMP / Sederajat', edu_smp_prog:'Program Reguler',
     edu_sd:'SD / Sederajat', edu_sd_prog:'Program Reguler',
-    exp_label:'PENGALAMAN', exp_title:'Lomba, Organisasi & Pengalaman Kerja',
+    exp_label:'PENGALAMAN',
     tab_lomba:'Lomba', tab_org:'Organisasi', tab_work:'Pengalaman Kerja',
     tag_national:'Lomba Nasional',
     lomba1_name:'Lomba Game Development I/O Fest 2024<br><small>Universitas Tarumanegara</small>',
-    lomba1_desc:'Lomba nasional tahunan Universitas Tarumanegara. Membuat game 3D horror lokal tentang anak diculik wewe gombel dengan mekanik puzzle solving dan escaping.',
+    lomba1_desc:'Lomba I/O Fest merupakan lomba nasional tahunan yang diselenggarakan oleh Universitas Tarumanegara. Pada tahun 2024 mengusung tema lokal, membuat game 3D horror tentang anak yang diculik wewe gombel dengan mekanik puzzle solving dan escaping.',
     lomba2_name:'Lomba Game Making IT Fest 2025<br><small>Universitas Paramadina</small>',
-    lomba2_desc:'Kompetisi tahunan teknologi dan inovasi. Meraih Juara 1 sekaligus penghargaan Game Terbaik.',
+    lomba2_desc:'IT Fest merupakan kompetisi tahunan di bidang teknologi dan inovasi. Pada tahun 2025 dalam kategori Game Making, berhasil meraih Juara 1 sekaligus penghargaan Game Terbaik.',
     see_more:'Lihat Selengkapnya', see_less:'Tutup', doc_label:'Dokumentasi',
     tag_org:'Organisasi Kampus',
-    contact_label:'KONTAK SAYA', contact_title:'Hubungi Saya',
-    contact_desc:'Saya terbuka untuk kolaborasi, diskusi proyek, atau peluang profesional baru.',
     copyright:'All rights reserved.',
   },
   en: {
     nav_home:'Home', nav_about:'About', nav_portfolio:'Portfolio',
     nav_edu:'Education', nav_exp:'Experience', nav_contact:'Contact',
-    hero_badge:'UI/UX Designer & Full-Stack Developer',
-    hero_greeting:'Hello, I am',
-    hero_iam:'',
-    hero_desc:'UI/UX Designer and Full-Stack Web Developer. This portfolio showcases my projects and contributions in technology and design.',
+    hero_badge:'UI/UX Designer',
     hero_btn_contact:'Contact Me', hero_btn_portfolio:'View Portfolio',
     about_label:'ABOUT ME',
-    about_title:'UI/UX Design & Full-Stack Developer',
-    about_bio:'My name is <strong>Marcellino Natanael</strong>, a final-year Information Systems student (semester 7) at Universitas Bunda Mulia Ancol.',
-    skill_main_title:'Core Skills',
-    skill_main_desc:'Specializing in UI/UX design with Figma and full-stack development with PHP and Laravel.',
-    contrib_title:'Professional Contributions',
-    contrib_desc:'Fully responsible for the complete development lifecycle of company information systems.',
-    port_label:'PROJECTS', port_title:'Projects I Have Developed',
-    filter_all:'All',
-    p1_type:'(Mobile App Design)', p1_desc:'Daily fitness tracking app with advanced AI integration.',
-    p2_type:'(Mobile App Design)', p2_desc:'Waste recycling app with a points reward system.',
-    p3_type:'(Mobile App Design)', p3_desc:'Ciputra super app — home search, bills, and transactions in one place.',
-    p4_type:'(Mobile App Design)', p4_desc:'Padel course app with knowledge management system.',
-    p5_type:'(Mobile App Design)', p5_desc:'Donation fundraising app for disaster victims.',
-    p6_type:'(Web Development)', p6_desc:'Full CRUD administration system for PT Karisma Dinamika Purwa.',
-    p7_type:'(Web Development)', p7_desc:'Decision Support System using SAW algorithm for auction asset prioritization.',
-    p8_desc:'Local 3D horror game about a child kidnapped by Wewe Gombel. 3rd Place & Favorite at I/O Fest 2024.',
-    p9_desc:'Local 3D horror game about a dark pesugihan story. Hology 7.0 – Universitas Brawijaya 2024.',
-    p10_desc:'Lowpoly 3D horror game about a family curse. 1st Place at IT Fest Universitas Paramadina 2025.',
-    p11_desc:'3D Horror game about a student and cheap accommodation with a dark colonial history.',
+    about_bio:'Hi, I am Marcellino Natanael! As a UI/UX Designer, I believe that good design isn\'t just about a pretty visual — it\'s about how that design can answer and solve the problems users actually need solved. With expertise in user research, wireframing, and prototyping in Figma, I\'m able to design interfaces for mobile and website applications based on modern, interactive, and intuitive user needs.',
+    skill_title:'Skills',
+    port_label:'PORTFOLIO',
+    filter_mobile:'Mobile', filter_website:'Website', filter_game:'Game',
     detail_link:'View Details',
-    dd_figma:'Figma Design', dd_open_figma:'Open in Figma →',
-    dd_proto:'Prototype', dd_open_proto:'Open Prototype →',
-    dd_framework:'Framework', dd_lang:'Programming Language',
-    dd_db:'Database', dd_method:'Method',
-    dd_min_req:'Minimum', dd_rec_req:'Recommended',
+    detail_back:'Back to Portfolio',
+    detail_panel_title:'Project Details', detail_game_panel_title:'Game Details',
+    detail_device:'Device Type', detail_year:'Year', detail_desc_title:'Project Description',
+    detail_method:'Method', detail_figma:'Figma Link', detail_open_figma:'Open in Figma →',
+    detail_genre:'Genre', detail_release_year:'Release Year', detail_game_desc_title:'Game Description',
+    detail_requirements:'Game Requirements', dd_min_req:'Minimum', dd_rec_req:'Recommended',
     dd_os:'OS', dd_cpu:'Processor', dd_gpu:'GPU', dd_ram:'RAM', dd_ssd:'Storage',
-    dd_download_text:'Download Game',
+    dd_download_text:'Download on Gamejolt',
     edu_label:'EDUCATION', edu_title:'Educational Background',
     edu_univ:'University', edu_univ_prog:'Information Systems',
     edu_smk:'Vocational High School', edu_smk_prog:'Accounting & Finance',
     edu_smp:'Junior High School', edu_smp_prog:'Regular Program',
     edu_sd:'Elementary School', edu_sd_prog:'Regular Program',
-    exp_label:'EXPERIENCE', exp_title:'Competitions, Organizations & Work',
+    exp_label:'EXPERIENCE',
     tab_lomba:'Competitions', tab_org:'Organizations', tab_work:'Work Experience',
     tag_national:'National Competition',
     lomba1_name:'Game Development Competition I/O Fest 2024<br><small>Universitas Tarumanegara</small>',
@@ -109,8 +73,6 @@ const translations = {
     lomba2_desc:'Annual technology and innovation competition. Won 1st Place and Best Game award.',
     see_more:'See More', see_less:'Close', doc_label:'Documentation',
     tag_org:'Campus Organization',
-    contact_label:'CONTACT', contact_title:'Get In Touch',
-    contact_desc:'I am open to collaboration, project discussions, or new professional opportunities.',
     copyright:'All rights reserved.',
   }
 };
@@ -132,6 +94,7 @@ function applyTranslations(lang) {
 document.getElementById('langToggle').addEventListener('click', () => {
   currentLang = currentLang === 'id' ? 'en' : 'id';
   applyTranslations(currentLang);
+  renderPortfolio();
 });
 
 /* ── NAVBAR ────────────────────────────────────────────────── */
@@ -143,9 +106,11 @@ const scrollProgress = document.getElementById('scrollProgress');
 
 function updateNav() {
   navbar.classList.toggle('scrolled', window.scrollY > 10);
-  let current = '';
-  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 110) current = s.id; });
-  navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+  if (sections.length > 0) {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 110) current = s.id; });
+    navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+  }
 
   // Progress bar
   const scrollTop  = window.scrollY;
@@ -182,36 +147,55 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-/* ── PORTFOLIO FILTER ──────────────────────────────────────── */
+/* ── PORTFOLIO RENDER + FILTER ─────────────────────────────── */
+const portfolioGrid = document.getElementById('portfolioGrid');
+let activePortfolioFilter = 'mobile';
+
+function projectBadgeHtml(p) {
+  if (p.badge) return `<span class="project-badge-award">${p.badge}</span>`;
+  return `<span class="project-year">${p.type === 'game' ? p.releaseYear : p.year}</span>`;
+}
+
+function renderPortfolio() {
+  if (!portfolioGrid || !window.PROJECTS) return;
+  const t = translations[currentLang];
+  const catLabel = { mobile: t.filter_mobile, website: t.filter_website, game: t.filter_game };
+  const catTagClass = { mobile: '', website: ' project-tag--web', game: ' project-tag--game' };
+
+  portfolioGrid.innerHTML = window.PROJECTS
+    .filter(p => p.category === activePortfolioFilter)
+    .map(p => `
+      <a class="project-card" href="project.html?id=${p.id}">
+        <div class="project-mockups">
+          ${p.images.slice(0, 3).map((src, i) => `<img src="${src}" alt="${p.name} ${i + 1}" class="mockup-img" />`).join('')}
+        </div>
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="project-tag${catTagClass[p.category]}">${catLabel[p.category]}</span>
+            ${projectBadgeHtml(p)}
+          </div>
+          <h3>${p.name}</h3>
+          <p>${p.description[currentLang]}</p>
+          <span class="project-detail-link">
+            ${t.detail_link}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </a>
+    `).join('');
+
+  portfolioGrid.querySelectorAll('.project-card').forEach(el => {
+    el.classList.add('reveal');
+    revObs.observe(el);
+  });
+}
+
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const f = btn.dataset.filter;
-    document.querySelectorAll('.project-card').forEach(card => {
-      const show = f === 'all' || card.dataset.category === f;
-      card.style.display = show ? '' : 'none';
-    });
-  });
-});
-
-/* ── PROJECT DROPDOWN ──────────────────────────────────────── */
-document.querySelectorAll('.project-dropdown-toggle').forEach(btn => {
-  btn.addEventListener('click', e => {
-    e.stopPropagation();
-    const dd = btn.nextElementSibling;
-    const open = dd.classList.contains('open');
-    document.querySelectorAll('.project-dropdown.open').forEach(d => {
-      d.classList.remove('open');
-      d.previousElementSibling?.setAttribute('aria-expanded','false');
-    });
-    if (!open) { dd.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
-  });
-});
-document.addEventListener('click', () => {
-  document.querySelectorAll('.project-dropdown.open').forEach(d => {
-    d.classList.remove('open');
-    d.previousElementSibling?.setAttribute('aria-expanded','false');
+    activePortfolioFilter = btn.dataset.filter;
+    renderPortfolio();
   });
 });
 
@@ -254,7 +238,7 @@ closeBtn.addEventListener('click', closeLB);
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && overlay.classList.contains('active')) closeLB(); });
 
 /* ── SCROLL REVEAL ─────────────────────────────────────────── */
-document.querySelectorAll('.project-card,.edu-card,.exp-card,.about-card,.section-header').forEach(el => el.classList.add('reveal'));
+document.querySelectorAll('.edu-card,.exp-card,.section-header').forEach(el => el.classList.add('reveal'));
 const revObs = new IntersectionObserver(entries => {
   entries.forEach((entry, i) => {
     if (!entry.isIntersecting) return;
@@ -263,6 +247,36 @@ const revObs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+
+renderPortfolio();
+
+/* ── ABOUT PHOTO UPLOAD ────────────────────────────────────── */
+const aboutPhotoBox   = document.getElementById('aboutPhotoBox');
+const aboutPhotoImg   = document.getElementById('aboutPhotoImg');
+const aboutPhotoInput = document.getElementById('aboutPhotoInput');
+const aboutPhotoChange = document.getElementById('aboutPhotoChange');
+
+function setAboutPhoto(dataUrl) {
+  aboutPhotoImg.src = dataUrl;
+  aboutPhotoBox.classList.add('has-photo');
+  aboutPhotoChange.style.display = 'inline-flex';
+}
+
+if (aboutPhotoInput) {
+  const savedPhoto = localStorage.getItem('aboutPhoto');
+  if (savedPhoto) setAboutPhoto(savedPhoto);
+
+  aboutPhotoInput.addEventListener('change', () => {
+    const file = aboutPhotoInput.files && aboutPhotoInput.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      setAboutPhoto(reader.result);
+      try { localStorage.setItem('aboutPhoto', reader.result); } catch (e) {}
+    };
+    reader.readAsDataURL(file);
+  });
+}
 
 /* ── COPYRIGHT YEAR ────────────────────────────────────────── */
 const yr = document.getElementById('copyrightYear');

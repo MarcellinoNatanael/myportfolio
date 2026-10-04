@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detail Proyek – Marcellino Natanael</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox-overlay" id="lightboxOverlay">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html#beranda" class="nav-logo">
+        <div class="logo-text">
+          <span class="logo-name">Marcellino Natanael</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#beranda"    class="nav-link" data-i18n="nav_home">Beranda</a></li>
+        <li><a href="index.html#tentang"    class="nav-link" data-i18n="nav_about">Tentang</a></li>
+        <li><a href="index.html#portfolio"  class="nav-link active" data-i18n="nav_portfolio">Portofolio</a></li>
+        <li><a href="index.html#pendidikan" class="nav-link" data-i18n="nav_edu">Pendidikan</a></li>
+        <li><a href="index.html#pengalaman" class="nav-link" data-i18n="nav_exp">Pengalaman</a></li>
+        <li><a href="index.html#kontak"     class="nav-link" data-i18n="nav_contact">Kontak</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-id active">ID</span>
+          <span class="lang-divider">/</span>
+          <span class="lang-en">EN</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- PROJECT DETAIL -->
+  <section class="section detail-section" id="detailSection">
+    <div class="container">
+      <div id="detailRoot"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col footer-brand">
+        <div class="footer-logo">
+          <span class="footer-logo-mark">MN</span>
+          <span>Marcellino Natanael</span>
+        </div>
+        <p>UI/UX Designer and System Analyst</p>
+        <a href="mailto:marcellinonatanael74@gmail.com" class="footer-email">marcellinonatanael74@gmail.com</a>
+      </div>
+      <div class="footer-col">
+        <h5>Navigasi</h5>
+        <ul>
+          <li><a href="index.html#beranda">Beranda</a></li>
+          <li><a href="index.html#tentang">Tentang Saya</a></li>
+          <li><a href="index.html#portfolio">Portofolio</a></li>
+          <li><a href="index.html#pendidikan">Pendidikan</a></li>
+          <li><a href="index.html#pengalaman">Pengalaman</a></li>
+          <li><a href="index.html#kontak">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Keahlian</h5>
+        <ul>
+          <li><a href="index.html#tentang">UI/UX Design</a></li>
+          <li><a href="index.html#tentang">Wireframing</a></li>
+          <li><a href="index.html#tentang">Prototyping</a></li>
+          <li><a href="index.html#tentang">User Flow</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="copyrightYear"></span> Marcellino Natanael. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <span>Designed &amp; Built with ❤️</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/projects-data.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/project.js"></script>
+</body>
+</html>
