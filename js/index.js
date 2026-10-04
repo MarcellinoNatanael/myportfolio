@@ -271,6 +271,7 @@ function renderCertificates() {
       (c.expires ? ` · ${t.cert_expires} ${c.expires[currentLang]}` : '');
     return `
       <article class="cert-card">
+        ${c.image ? `<div class="cert-image"><img src="${c.image}" alt="${c.name}" class="zoomable" loading="lazy" /></div>` : ''}
         <div class="cert-logo cert-logo--${CARD_COLORS[i % CARD_COLORS.length]}">${logo}</div>
         <div class="cert-body">
           <h3>${c.name}</h3>
