@@ -122,9 +122,15 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 /* ─── NAVBAR ─────────────────────────────────── */
 .navbar{
   position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);
-  background:var(--nav-bg);backdrop-filter:blur(12px);
   border-bottom:1px solid transparent;
-  transition:border-color var(--ease),background var(--ease);
+  transition:border-color var(--ease);
+}
+/* Blur lives on a pseudo layer: backdrop-filter on .navbar itself would make
+   it the containing block for the fixed mobile menu and squash it to 72px */
+.navbar::before{
+  content:'';position:absolute;inset:0;z-index:-1;
+  background:var(--nav-bg);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
 }
 .navbar.scrolled{border-bottom-color:var(--border)}
 .scroll-progress{
