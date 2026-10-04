@@ -286,8 +286,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .project-card--yellow{background:var(--yellow)}
 
 .project-media{
-  display:grid;gap:8px;height:200px;margin-bottom:.25rem;
-  border-radius:var(--r-md);overflow:hidden;
+  display:grid;gap:0;height:200px;margin-bottom:.25rem;
+  border-radius:8px;overflow:hidden;
   background:rgba(255,255,255,.45);
 }
 .project-media--2{grid-template-columns:1fr 1fr}
