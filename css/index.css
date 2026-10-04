@@ -26,6 +26,7 @@
   --ink-3:    #6B7280;
   --border:   #E4E7EC;
   --nav-bg:   rgba(255,255,255,.88);
+  --menu-bg:  rgba(255,255,255,.7);
   --shadow:   0 10px 30px rgba(17,24,39,.08);
   --shadow-lg:0 18px 48px rgba(17,24,39,.14);
 
@@ -46,6 +47,7 @@
   --ink-3:    #9097AA;
   --border:   #2A3054;
   --nav-bg:   rgba(17,20,39,.88);
+  --menu-bg:  rgba(17,20,39,.7);
   --shadow:   0 10px 30px rgba(0,0,0,.35);
   --shadow-lg:0 18px 48px rgba(0,0,0,.5);
 }
@@ -495,12 +497,20 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .kontak-card{grid-template-columns:1fr;gap:2rem;padding:2.5rem}
 }
 @media(max-width:860px){
+  /* Dropdown panel under the bar, items aligned with the M logo */
   .nav-links{
-    display:none;position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;
-    background:var(--bg);flex-direction:column;align-items:center;justify-content:center;gap:.75rem;z-index:999;
+    display:none;position:fixed;top:var(--nav-h);left:0;right:0;z-index:999;
+    flex-direction:column;align-items:flex-start;gap:2px;
+    padding:.75rem 2rem 1.25rem;
+    background:var(--menu-bg);
+    -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+    border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+    box-shadow:0 12px 24px rgba(17,24,39,.08);
   }
-  .nav-links.open{display:flex}
-  .nav-link{font-size:17px}
+  .nav-links.open{display:flex;animation:fadeIn .2s ease}
+  .nav-links li{width:100%}
+  .nav-link{display:block;font-size:15px;padding:10px 0;border-radius:0}
+  .nav-link:hover{background:none}
   .hamburger{display:flex}
 }
 @media(max-width:768px){
@@ -514,6 +524,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 }
 @media(max-width:520px){
   .container,.nav-inner{padding:0 16px}
+  .nav-links{padding-left:16px;padding-right:16px}
   .logo-name{display:none}
   .hero-card{padding:2.25rem 1.25rem;border-radius:var(--r-lg)}
   .hero-stats{grid-template-columns:1fr}
