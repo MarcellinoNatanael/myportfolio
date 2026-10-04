@@ -6,7 +6,7 @@
 const translations = {
   id: {
     nav_home:'Beranda', nav_about:'Tentang', nav_portfolio:'Portofolio',
-    nav_edu:'Pendidikan', nav_exp:'Pengalaman', nav_contact:'Kontak',
+    nav_edu:'Pendidikan', nav_exp:'Pengalaman', nav_cert:'Sertifikat', nav_contact:'Kontak',
     hero_hello:'Hi, Saya',
     hero_btn_contact:'Hubungi Saya', hero_btn_portfolio:'Lihat Portofolio', hero_btn_cv:'Unduh CV',
     hero_exp_title:'Pengalaman<br>Profesional',
@@ -23,7 +23,9 @@ const translations = {
     open_figma:'Open Design in Figma', open_gamejolt:'Open in Gamejolt',
     link_soon:'Link segera tersedia',
 
-    edu_label:'Riwayat Pendidikan',
+    edu_label:'Riwayat Pendidikan', edu_gpa:'IPK', edu_avg:'Nilai Rata-rata',
+    cert_label:'Lisensi &amp; Sertifikasi', cert_issued:'Diterbitkan', cert_expires:'Berlaku hingga',
+    cert_id:'ID Kredensial', cert_show:'Tampilkan kredensial',
     edu_univ:'S1 / Perguruan Tinggi', edu_univ_prog:'Sistem Informasi',
     edu_univ_desc:'Selama perkuliahan, fokus utama saya adalah mendalami bidang UI/UX Design dan System Analyst. Saya mengikuti beberapa perlombaan seperti The Ace 2025 dan Sitefest 4.0, serta sudah membuat lebih dari 10 proyek UI/UX, baik untuk website maupun mobile user interface.',
     edu_univ_more:'Selain UI/UX Design, saya juga mempelajari bagaimana sebuah bisnis atau organisasi dapat terintegrasi dengan baik bersama sistem informasi sehingga mampu mendukung pengambilan keputusan yang strategis. Saya juga belajar merancang database dan arsitektur sistem mulai dari backend hingga frontend. Di tengah majunya teknologi Artificial Intelligence (AI) yang membantu developer membuat program yang lebih efisien dan terstruktur, saya memandang AI bukan sebagai pengganti, melainkan alat bantu yang mempersingkat proses pengembangan sistem.',
@@ -59,7 +61,7 @@ const translations = {
   },
   en: {
     nav_home:'Home', nav_about:'About', nav_portfolio:'Portfolio',
-    nav_edu:'Education', nav_exp:'Experience', nav_contact:'Contact',
+    nav_edu:'Education', nav_exp:'Experience', nav_cert:'Certificates', nav_contact:'Contact',
     hero_hello:'Hi, I am',
     hero_btn_contact:'Contact Me', hero_btn_portfolio:'View Portfolio', hero_btn_cv:'Download CV',
     hero_exp_title:'Professional<br>Experience',
@@ -76,7 +78,9 @@ const translations = {
     open_figma:'Open Design in Figma', open_gamejolt:'Open in Gamejolt',
     link_soon:'Link coming soon',
 
-    edu_label:'Education',
+    edu_label:'Education', edu_gpa:'GPA', edu_avg:'Average Score',
+    cert_label:'Licenses &amp; Certifications', cert_issued:'Issued', cert_expires:'Expires',
+    cert_id:'Credential ID', cert_show:'Show credential',
     edu_univ:'Bachelor\'s Degree', edu_univ_prog:'Information Systems',
     edu_univ_desc:'During my studies, my main focus has been UI/UX Design and System Analysis. I have joined several competitions such as The Ace 2025 and Sitefest 4.0, and have built more than 10 UI/UX projects for both website and mobile user interfaces.',
     edu_univ_more:'Beyond UI/UX Design, I study how a business or organization can integrate well with information systems to support strategic decision making. I also learn to design databases and system architecture from backend to frontend. As Artificial Intelligence (AI) helps developers build more efficient and structured programs, I see AI not as a replacement, but as a tool that speeds up system development.',
@@ -142,6 +146,7 @@ document.getElementById('langToggle').addEventListener('click', () => {
   store('lang', currentLang);
   applyTranslations(currentLang);
   renderPortfolio();
+  renderCertificates();
 });
 
 /* ── THEME ─────────────────────────────────────────────────── */
@@ -246,6 +251,39 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
+/* ── CERTIFICATES ──────────────────────────────────────────── */
+const certSection = document.getElementById('sertifikat');
+const certList    = document.getElementById('certList');
+
+function renderCertificates() {
+  const certs = window.CERTIFICATES || [];
+  const show  = certs.length > 0;
+  if (certSection) certSection.hidden = !show;
+  document.querySelectorAll('.nav-link--cert').forEach(l => { l.hidden = !show; });
+  if (!certList || !show) return;
+  const t = translations[currentLang];
+
+  certList.innerHTML = certs.map((c, i) => {
+    const logo = c.logo
+      ? `<img src="${c.logo}" alt="${c.issuer}" />`
+      : `<span>${c.issuer.charAt(0)}</span>`;
+    const dates = `${t.cert_issued} ${c.issued[currentLang]}` +
+      (c.expires ? ` · ${t.cert_expires} ${c.expires[currentLang]}` : '');
+    return `
+      <article class="cert-card">
+        <div class="cert-logo cert-logo--${CARD_COLORS[i % CARD_COLORS.length]}">${logo}</div>
+        <div class="cert-body">
+          <h3>${c.name}</h3>
+          <p class="cert-issuer">${c.issuer}</p>
+          <p class="cert-meta">${dates}</p>
+          ${c.credentialId ? `<p class="cert-meta">${t.cert_id}: ${c.credentialId}</p>` : ''}
+          ${c.url ? `<a class="cert-link" href="${c.url}" target="_blank" rel="noopener">${t.cert_show}
+            <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg></a>` : ''}
+        </div>
+      </article>`;
+  }).join('');
+}
+
 /* ── EXP TABS ──────────────────────────────────────────────── */
 document.querySelectorAll('.exp-tab').forEach(tab => {
   tab.addEventListener('click', () => {
@@ -301,3 +339,4 @@ if (yr) yr.textContent = new Date().getFullYear();
 /* ── INIT ──────────────────────────────────────────────────── */
 applyTranslations(currentLang);
 renderPortfolio();
+renderCertificates();

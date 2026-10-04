@@ -41,6 +41,7 @@
         <li><a href="#portfolio"  class="nav-link" data-i18n="nav_portfolio">Portofolio</a></li>
         <li><a href="#pendidikan" class="nav-link" data-i18n="nav_edu">Pendidikan</a></li>
         <li><a href="#pengalaman" class="nav-link" data-i18n="nav_exp">Pengalaman</a></li>
+        <li><a href="#sertifikat" class="nav-link nav-link--cert" data-i18n="nav_cert" hidden>Sertifikat</a></li>
         <li><a href="#kontak"     class="nav-link" data-i18n="nav_contact">Kontak</a></li>
       </ul>
 
@@ -176,6 +177,7 @@
               </div>
               <h3>Universitas Bunda Mulia</h3>
               <p class="edu-prog" data-i18n="edu_univ_prog">Sistem Informasi</p>
+              <p class="edu-score"><span data-i18n="edu_gpa">IPK</span> <strong>3.61</strong> / 4.00</p>
             </div>
           </div>
           <p class="edu-desc" data-i18n="edu_univ_desc"></p>
@@ -197,6 +199,7 @@
               </div>
               <h3>SMK Dhammasavana</h3>
               <p class="edu-prog" data-i18n="edu_smk_prog">Akuntansi dan Keuangan Lembaga</p>
+              <p class="edu-score"><span data-i18n="edu_avg">Nilai Rata-rata</span> <strong>84</strong></p>
             </div>
           </div>
           <p class="edu-desc" data-i18n="edu_smk_desc"></p>
@@ -362,6 +365,16 @@
     </div>
   </section>
 
+  <!-- SERTIFIKAT -->
+  <section class="section cert-section" id="sertifikat" hidden>
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-label" data-i18n="cert_label">Lisensi &amp; Sertifikasi</h2>
+      </div>
+      <div class="cert-list" id="certList"></div>
+    </div>
+  </section>
+
   <!-- KONTAK -->
   <section class="section kontak-section" id="kontak">
     <div class="container">
@@ -415,6 +428,7 @@
   </footer>
 
   <script src="js/projects-data.js"></script>
+  <script src="js/certificates-data.js"></script>
   <script src="js/index.js"></script>
 </body>
 </html>
