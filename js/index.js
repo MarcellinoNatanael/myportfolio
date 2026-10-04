@@ -341,3 +341,4 @@ if (yr) yr.textContent = new Date().getFullYear();
 applyTranslations(currentLang);
 renderPortfolio();
 renderCertificates();
+updateNav();

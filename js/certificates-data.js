@@ -18,17 +18,17 @@ window.CERTIFICATES = [
   {
     name: 'Datacom - Software Development Job Simulation',
     issuer: 'Forage',
-    image: '',
+    image: 'img/certificates/Forage.jpg',
     logo: '',
     issued: { id: 'Sep 2026', en: 'Sep 2026' },
     expires: null,
     credentialId: '6aba10cff13560b2ad750cfd',
-    url: ''
+    url: 'https://www.theforage.com/completion-certificates/gCW7Xki5Y3vNpBmnn/L3NcyCoAjLno9d3T9_gCW7Xki5Y3vNpBmnn_6aba0d6ca90bc149454c9f30_1790582277790_completion_certificate.pdf'
   },
   {
     name: 'How to Create a Survival Horror in Unreal Engine',
     issuer: 'Udemy',
-    image: '',
+    image: 'img/certificates/Unreal%20How%20to%20Create%20Survival%20Horror.jpg',
     logo: '',
     issued: { id: 'Agu 2026', en: 'Aug 2026' },
     expires: null,
@@ -38,7 +38,7 @@ window.CERTIFICATES = [
   {
     name: 'Digital Marketing Certified',
     issuer: 'HubSpot Academy',
-    image: '',
+    image: 'img/certificates/Digital%20Marketing.jpg',
     logo: '',
     issued: { id: 'Mei 2026', en: 'May 2026' },
     expires: { id: 'Jun 2027', en: 'Jun 2027' },
@@ -48,7 +48,7 @@ window.CERTIFICATES = [
   {
     name: 'Unreal Engine: Ultimate Survival Horror Course',
     issuer: 'Udemy',
-    image: '',
+    image: 'img/certificates/Unreal%20Ultimate%20Survival%20Horror%20Course.jpg',
     logo: '',
     issued: { id: 'Mar 2024', en: 'Mar 2024' },
     expires: null,
