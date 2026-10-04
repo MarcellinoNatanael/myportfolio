@@ -3,10 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Marcellino Natanael – Portfolio</title>
+  <title>Marcellino Natanael | Portfolio</title>
+  <meta name="description" content="Portfolio Marcellino Natanael, UI/UX Designer dan System Analyst." />
+  <script>
+    /* Apply saved theme before first paint to avoid a flash */
+    (function () {
+      var theme = 'light';
+      try { theme = localStorage.getItem('theme') || 'light'; } catch (e) {}
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css"/>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
@@ -22,26 +31,30 @@
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="#beranda" class="nav-logo">
-        <div class="logo-text">
-          <span class="logo-name">Marcellino Natanael</span>
-        </div>
+        <span class="logo-mark">M</span>
+        <span class="logo-name">Marcellino Natanael</span>
       </a>
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#beranda"    class="nav-link active" data-i18n="nav_home">Beranda</a></li>
-        <li><a href="#tentang"   class="nav-link" data-i18n="nav_about">Tentang</a></li>
-        <li><a href="#portfolio" class="nav-link" data-i18n="nav_portfolio">Portofolio</a></li>
+        <li><a href="#tentang"    class="nav-link" data-i18n="nav_about">Tentang</a></li>
+        <li><a href="#portfolio"  class="nav-link" data-i18n="nav_portfolio">Portofolio</a></li>
         <li><a href="#pendidikan" class="nav-link" data-i18n="nav_edu">Pendidikan</a></li>
         <li><a href="#pengalaman" class="nav-link" data-i18n="nav_exp">Pengalaman</a></li>
-        <li><a href="#kontak"    class="nav-link" data-i18n="nav_contact">Kontak</a></li>
+        <li><a href="#kontak"     class="nav-link" data-i18n="nav_contact">Kontak</a></li>
       </ul>
 
       <div class="nav-right">
-        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+        <button class="icon-toggle lang-toggle" id="langToggle" aria-label="Toggle language">
           <span class="lang-id active">ID</span>
           <span class="lang-divider">/</span>
           <span class="lang-en">EN</span>
         </button>
+        <button class="icon-toggle theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke-linecap="round"/></svg>
+        </button>
+        <a href="#kontak" class="btn btn-yellow nav-cta" data-i18n="hero_btn_contact">Hubungi Saya</a>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
@@ -51,52 +64,50 @@
 
   <!-- SCROLL PROGRESS BAR -->
   <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- BERANDA -->
   <section class="hero" id="beranda">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-blob hero-blob-1"></div>
-    <div class="hero-blob hero-blob-2"></div>
-    <div class="hero-inner">
-      <div class="hero-left">
-        <h1 class="hero-title">Marcellino Natanael</h1>
-        <p class="hero-role" data-i18n="hero_badge">UI/UX Designer and System Analyst</p>
-        <div class="hero-actions">
-          <a href="#kontak" class="btn-primary" data-i18n="hero_btn_contact">
-            <span>Hubungi Saya</span>
-            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/></svg>
-          </a>
-          <a href="#portfolio" class="btn-outline" data-i18n="hero_btn_portfolio">
-            <span>Lihat Portofolio</span>
-            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
-          </a>
+    <div class="container">
+      <div class="hero-card">
+        <div class="hero-left">
+          <p class="hero-hello" data-i18n="hero_hello">Hi, Saya</p>
+          <h1 class="hero-title">Marcellino Natanael!</h1>
+          <p class="hero-role">UI/UX Designer<span class="slash">/</span>System Analyst</p>
+          <div class="hero-actions">
+            <a href="CV.pdf" class="btn btn-yellow" download="CV_Marcellino_Natanael.pdf">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span data-i18n="hero_btn_cv">Unduh CV</span>
+            </a>
+            <a href="#portfolio" class="btn-play">
+              <span class="play-dot"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M8 5v14l11-7z"/></svg></span>
+              <span data-i18n="hero_btn_portfolio">Lihat Portofolio</span>
+            </a>
+          </div>
         </div>
+        <div class="hero-right">
+          <div class="hero-arch">
+            <img src="img/Profile.png" alt="Marcellino Natanael" class="zoomable" />
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <h2 class="hero-exp-title" data-i18n="hero_exp_title">Pengalaman<br>Profesional</h2>
         <div class="hero-stats">
-          <div class="stat-item">
+          <div class="stat-card stat-card--peach">
+            <span class="stat-label" data-i18n="stat_projects">Proyek Selesai</span>
             <span class="stat-num">10+</span>
-            <span class="stat-label">Proyek<br>Diselesaikan</span>
           </div>
-          <div class="stat-item">
+          <div class="stat-card stat-card--lav">
+            <span class="stat-label" data-i18n="stat_years">Tahun Pengalaman</span>
             <span class="stat-num">4+</span>
-            <span class="stat-label">Tahun<br>Pengalaman</span>
           </div>
-          <div class="stat-item">
+          <div class="stat-card stat-card--mint">
+            <span class="stat-label" data-i18n="stat_awards">Penghargaan Lomba</span>
             <span class="stat-num">3</span>
-            <span class="stat-label">Penghargaan<br>Lomba</span>
           </div>
         </div>
       </div>
-      <div class="hero-right">
-        <div class="hero-photo-wrapper">
-          <div class="hero-photo-frame">
-            <div class="photo-box">
-              <img src="img/Profile.png" alt="Marcellino Natanael" class="zoomable" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
     </div>
   </section>
 
@@ -104,65 +115,26 @@
   <section class="section about-section" id="tentang">
     <div class="container">
       <div class="section-header">
-        <div class="section-label" data-i18n="about_label">TENTANG SAYA</div>
+        <h2 class="section-label" data-i18n="about_label">Tentang Saya</h2>
       </div>
 
-      <div class="about-grid">
-        <div class="about-bio">
-          <p class="about-lead" data-i18n="about_bio">Hi, Saya Marcellino Natanael! Sebagai seorang UI/UX Designer, saya percaya bahwa desain yang baik bukan hanya sekedar visual yang cantik, tapi bagaimana desain tersebut dapat menjawab dan menyelesaikan permasalahan yang dibutuhkan pengguna. Dengan keahlian dibidang riset user, wireframing, hingga prototyping di Figma, saya mampu merancang desain antar muka aplikasi mobile maupun website berdasarkan kebutuhan pengguna yang modern, interaktif dan intuitif.</p>
+      <div class="about-card">
+        <p class="about-lead" data-i18n="about_bio"></p>
+      </div>
 
-          <h3 class="skill-pills-title" data-i18n="skill_title">Keahlian</h3>
-          <div class="skill-tags-section">
-            <div class="skill-tags">
-              <span class="skill-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 8h8M8 12h8M8 16h5" stroke-linecap="round"/></svg>
-                Riset Pengguna
-              </span>
-              <span class="skill-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12a8 8 0 0113.66-5.66L20 8M20 4v4h-4M20 12a8 8 0 01-13.66 5.66L4 16M4 20v-4h4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Penggunaan Metode Desain
-              </span>
-              <span class="skill-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="1.5"/><path d="M3 8h18M7 13h4M7 16h7" stroke-linecap="round"/></svg>
-                Wireframing
-              </span>
-              <span class="skill-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="7" height="16" rx="1"/><rect x="14" y="4" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="6" rx="1"/></svg>
-                Auto Layout
-              </span>
-              <span class="skill-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.5 4.5L19 8l-3.5 3 1 5-4.5-2.5L7.5 16l1-5L5 8l4.5-1.5z"/></svg>
-                Component
-              </span>
-              <span class="skill-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="18" r="2.2"/><circle cx="19" cy="6" r="2.2"/><path d="M7 6h10M17 8.2V15.8M17 15.8L9 6" stroke-linecap="round"/></svg>
-                User Flow
-              </span>
-              <span class="skill-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 19h4" stroke-linecap="round"/></svg>
-                Mockup Application
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-photo-col">
-          <div class="about-photo-box">
-            <div class="photo-box" id="aboutPhotoBox">
-              <img id="aboutPhotoImg" src="" alt="Foto Marcellino Natanael" class="zoomable" />
-              <label class="about-photo-upload" for="aboutPhotoInput">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 16V4m0 0L7 9m5-5l5 5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 16.5v2A2.5 2.5 0 0117.5 21h-11A2.5 2.5 0 014 18.5v-2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span>Upload Foto Anda</span>
-                <small>PNG / JPG, maks. 5MB</small>
-              </label>
-            </div>
-            <input type="file" id="aboutPhotoInput" accept="image/*" hidden />
-            <label for="aboutPhotoInput" class="about-photo-change" id="aboutPhotoChange" style="display:none">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 000-1.41l-2.34-2.34a1 1 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
-              Ganti Foto
-            </label>
-          </div>
-        </div>
+      <h3 class="sub-title" data-i18n="skill_title">Keahlian</h3>
+      <div class="skill-tags">
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8" stroke-linecap="round"/></svg>UI/UX Design</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>UI Design</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5" stroke-linecap="round"/></svg>UX Research</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.5 10.9c.6.4 1 1.1 1 1.9V16h5v-.2c0-.8.4-1.5 1-1.9A6 6 0 0012 3z" stroke-linecap="round" stroke-linejoin="round"/></svg>Design Thinking</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0" stroke-linecap="round"/></svg>User-Centered</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="5" rx="1"/><rect x="14" y="16" width="7" height="5" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><path d="M6.5 8v5.5h11V16M17.5 8v5.5" stroke-linecap="round"/></svg>System Analyst</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" stroke-linecap="round"/></svg>Business Analyst</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l6-6 4 4 8-8M15 7h6v6" stroke-linecap="round" stroke-linejoin="round"/></svg>Business Development</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="8" y="2.5" width="8" height="5" rx="1"/><rect x="2.5" y="16.5" width="8" height="5" rx="1"/><rect x="13.5" y="16.5" width="8" height="5" rx="1"/><path d="M12 7.5V12M6.5 16.5V12h11v4.5" stroke-linecap="round"/></svg>Unified Modeling Language (UML)</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v13c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-13M4.5 12c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8"/></svg>Database Structured</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" stroke-linecap="round" stroke-linejoin="round"/></svg>Basic Programming</span>
       </div>
     </div>
   </section>
@@ -171,13 +143,13 @@
   <section class="section portfolio-section" id="portfolio">
     <div class="container">
       <div class="section-header">
-        <div class="section-label" data-i18n="port_label">PORTOFOLIO</div>
+        <h2 class="section-label" data-i18n="port_label">Portofolio</h2>
       </div>
 
-      <div class="portfolio-filter">
-        <button class="filter-btn active" data-filter="mobile" data-i18n="filter_mobile">Mobile</button>
-        <button class="filter-btn" data-filter="website" data-i18n="filter_website">Website</button>
-        <button class="filter-btn" data-filter="game" data-i18n="filter_game">Game</button>
+      <div class="pill-group portfolio-filter">
+        <button class="pill filter-btn active" data-filter="mobile" data-i18n="filter_mobile">Mobile</button>
+        <button class="pill filter-btn" data-filter="website" data-i18n="filter_website">Website</button>
+        <button class="pill filter-btn" data-filter="game" data-i18n="filter_game">Game</button>
       </div>
 
       <div class="portfolio-grid" id="portfolioGrid"></div>
@@ -188,58 +160,51 @@
   <section class="section edu-section" id="pendidikan">
     <div class="container">
       <div class="section-header">
-        <div class="section-label" data-i18n="edu_label">RIWAYAT PENDIDIKAN</div>
-        <h2 class="section-title" data-i18n="edu_title">Latar Belakang<br>Pendidikan</h2>
+        <h2 class="section-label" data-i18n="edu_label">Riwayat Pendidikan</h2>
       </div>
 
-      <div class="edu-timeline">
-        <div class="edu-card">
-          <div class="edu-logo-wrap">
-            <img src="img/logo_ubm.png" alt="Universitas Bunda Mulia" class="edu-logo-img zoomable" />
+      <div class="edu-list">
+        <article class="edu-card">
+          <div class="edu-head">
+            <div class="edu-logo-wrap">
+              <img src="img/logo_ubm.png" alt="Universitas Bunda Mulia" class="edu-logo-img zoomable" />
+            </div>
+            <div class="edu-info">
+              <div class="edu-badges">
+                <span class="chip chip--teal">2023 - 2027</span>
+                <span class="chip" data-i18n="edu_univ">S1 / Perguruan Tinggi</span>
+              </div>
+              <h3>Universitas Bunda Mulia</h3>
+              <p class="edu-prog" data-i18n="edu_univ_prog">Sistem Informasi</p>
+            </div>
           </div>
-          <div class="edu-info">
-            <span class="edu-year-badge">2023 – 2027</span>
-            <span class="edu-level" data-i18n="edu_univ">Perguruan Tinggi</span>
-            <h4>Universitas Bunda Mulia</h4>
-            <p data-i18n="edu_univ_prog">Sistem Informasi</p>
+          <p class="edu-desc" data-i18n="edu_univ_desc"></p>
+          <button class="text-toggle" data-i18n="see_more">Lihat Selengkapnya</button>
+          <div class="collapse">
+            <p class="edu-desc" data-i18n="edu_univ_more"></p>
           </div>
-        </div>
+        </article>
 
-        <div class="edu-card">
-          <div class="edu-logo-wrap">
-            <img src="img/logo_smk.jpg" alt="SMK Dhammasavana" class="edu-logo-img zoomable" />
+        <article class="edu-card">
+          <div class="edu-head">
+            <div class="edu-logo-wrap">
+              <img src="img/logo_smk.jpg" alt="SMK Dhammasavana" class="edu-logo-img zoomable" />
+            </div>
+            <div class="edu-info">
+              <div class="edu-badges">
+                <span class="chip chip--peach">2020 - 2023</span>
+                <span class="chip" data-i18n="edu_smk">Sekolah Menengah Kejuruan</span>
+              </div>
+              <h3>SMK Dhammasavana</h3>
+              <p class="edu-prog" data-i18n="edu_smk_prog">Akuntansi dan Keuangan Lembaga</p>
+            </div>
           </div>
-          <div class="edu-info">
-            <span class="edu-year-badge">2020 – 2023</span>
-            <span class="edu-level" data-i18n="edu_smk">SMK / Sederajat</span>
-            <h4>SMK Dhammasavana</h4>
-            <p data-i18n="edu_smk_prog">Akuntansi Keuangan dan Lembaga</p>
+          <p class="edu-desc" data-i18n="edu_smk_desc"></p>
+          <button class="text-toggle" data-i18n="see_more">Lihat Selengkapnya</button>
+          <div class="collapse">
+            <p class="edu-desc" data-i18n="edu_smk_more"></p>
           </div>
-        </div>
-
-        <div class="edu-card">
-          <div class="edu-logo-wrap">
-            <img src="img/logo_smk.jpg" alt="SMP Dhammasavana" class="edu-logo-img zoomable" />
-          </div>
-          <div class="edu-info">
-            <span class="edu-year-badge">2017 – 2020</span>
-            <span class="edu-level" data-i18n="edu_smp">SMP / Sederajat</span>
-            <h4>SMP Dhammasavana</h4>
-            <p data-i18n="edu_smp_prog">Program Reguler</p>
-          </div>
-        </div>
-
-        <div class="edu-card">
-          <div class="edu-logo-wrap">
-            <img src="img/logo_sd.png" alt="SD Budhidaya" class="edu-logo-img zoomable" />
-          </div>
-          <div class="edu-info">
-            <span class="edu-year-badge">2011 – 2017</span>
-            <span class="edu-level" data-i18n="edu_sd">SD / Sederajat</span>
-            <h4>SD Budhidaya</h4>
-            <p data-i18n="edu_sd_prog">Program Reguler</p>
-          </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -248,31 +213,31 @@
   <section class="section exp-section" id="pengalaman">
     <div class="container">
       <div class="section-header">
-        <div class="section-label" data-i18n="exp_label">PENGALAMAN</div>
+        <h2 class="section-label" data-i18n="exp_label">Pengalaman</h2>
       </div>
 
-      <div class="exp-tabs">
-        <button class="exp-tab active" data-tab="lomba" data-i18n="tab_lomba">Lomba</button>
-        <button class="exp-tab" data-tab="organisasi" data-i18n="tab_org">Organisasi</button>
-        <button class="exp-tab" data-tab="kerja" data-i18n="tab_work">Pengalaman Kerja</button>
+      <div class="pill-group exp-tabs">
+        <button class="pill exp-tab active" data-tab="lomba" data-i18n="tab_lomba">Lomba</button>
+        <button class="pill exp-tab" data-tab="organisasi" data-i18n="tab_org">Organisasi</button>
+        <button class="pill exp-tab" data-tab="kerja" data-i18n="tab_work">Pengalaman Kerja</button>
       </div>
 
       <!-- Lomba -->
       <div class="exp-content active" id="tab-lomba">
-        <div class="exp-card expandable">
+        <div class="exp-card">
           <div class="exp-img-wrap">
             <img src="img/io_fest.jpg" alt="I/O Fest 2024" class="exp-photo zoomable" />
           </div>
           <div class="exp-body">
-            <span class="exp-tag" data-i18n="tag_national">Lomba Nasional</span>
-            <h3 data-i18n="lomba1_name">Lomba Game Development I/O Fest 2024<br><small>Universitas Tarumanegara</small></h3>
+            <span class="chip chip--teal" data-i18n="tag_national">Lomba Nasional</span>
+            <h3 data-i18n="lomba1_name"></h3>
             <p class="exp-achievement">
-              <span class="achievement-badge">🏆 Juara 3</span>
-              <span class="achievement-badge">⭐ Juara Favorit</span>
+              <span class="achievement-badge" data-i18n="award_3rd">🏆 Juara 3</span>
+              <span class="achievement-badge" data-i18n="award_fav">⭐ Juara Favorit</span>
             </p>
-            <button class="exp-toggle" data-i18n="see_more">Lihat Selengkapnya</button>
-            <div class="exp-detail">
-              <p data-i18n="lomba1_desc">Lomba I/O Fest merupakan lomba nasional tahunan yang diselenggarakan oleh Universitas Tarumanegara. Pada tahun 2024 mengusung tema lokal, membuat game 3D horror tentang anak yang diculik wewe gombel dengan mekanik puzzle solving dan escaping.</p>
+            <button class="text-toggle" data-i18n="see_more">Lihat Selengkapnya</button>
+            <div class="collapse">
+              <p data-i18n="lomba1_desc"></p>
               <p class="exp-doc-label" data-i18n="doc_label">Dokumentasi</p>
               <div class="exp-docs">
                 <img src="img/IMG_2323.jpg" alt="Dokumentasi I/O Fest 1" class="exp-doc-img zoomable" />
@@ -283,25 +248,73 @@
           </div>
         </div>
 
-        <div class="exp-card expandable">
+        <div class="exp-card">
           <div class="exp-img-wrap">
             <img src="img/Lomba_1.jpeg" alt="IT Fest 2025" class="exp-photo zoomable" />
           </div>
           <div class="exp-body">
-            <span class="exp-tag" data-i18n="tag_national">Lomba Nasional</span>
-            <h3 data-i18n="lomba2_name">Lomba Game Making IT Fest 2025<br><small>Universitas Paramadina</small></h3>
+            <span class="chip chip--teal" data-i18n="tag_national">Lomba Nasional</span>
+            <h3 data-i18n="lomba2_name"></h3>
             <p class="exp-achievement">
-              <span class="achievement-badge achievement-badge--gold">🥇 Juara 1 – Game Terbaik</span>
+              <span class="achievement-badge achievement-badge--gold" data-i18n="award_1st">🥇 Juara 1 - Game Terbaik</span>
             </p>
-            <button class="exp-toggle" data-i18n="see_more">Lihat Selengkapnya</button>
-            <div class="exp-detail">
-              <p data-i18n="lomba2_desc">IT Fest merupakan kompetisi tahunan di bidang teknologi dan inovasi. Pada tahun 2025 dalam kategori Game Making, berhasil meraih Juara 1 sekaligus penghargaan Game Terbaik.</p>
+            <button class="text-toggle" data-i18n="see_more">Lihat Selengkapnya</button>
+            <div class="collapse">
+              <p data-i18n="lomba2_desc"></p>
               <p class="exp-doc-label" data-i18n="doc_label">Dokumentasi</p>
               <div class="exp-docs">
                 <img src="img/Lomba_1.jpeg" alt="Dokumentasi IT Fest 1" class="exp-doc-img zoomable" />
                 <img src="img/Lomba_2.webp" alt="Dokumentasi IT Fest 2" class="exp-doc-img zoomable" />
                 <img src="img/Lomba_3.webp" alt="Dokumentasi IT Fest 3" class="exp-doc-img zoomable" />
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-img-wrap">
+            <img src="img/jurig_1.png" alt="Hology 7.0" class="exp-photo zoomable" />
+          </div>
+          <div class="exp-body">
+            <span class="chip chip--teal" data-i18n="tag_national">Lomba Nasional</span>
+            <h3 data-i18n="lomba3_name"></h3>
+            <button class="text-toggle" data-i18n="see_more">Lihat Selengkapnya</button>
+            <div class="collapse">
+              <p data-i18n="lomba3_desc"></p>
+              <p class="exp-doc-label" data-i18n="doc_label">Dokumentasi</p>
+              <div class="exp-docs">
+                <img src="img/jurig_1.png" alt="Jurig Jiwa Nu Leungit 1" class="exp-doc-img zoomable" />
+                <img src="img/jurig_2.png" alt="Jurig Jiwa Nu Leungit 2" class="exp-doc-img zoomable" />
+                <img src="img/jurig_3.png" alt="Jurig Jiwa Nu Leungit 3" class="exp-doc-img zoomable" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-img-wrap exp-img-wrap--icon exp-img-wrap--lav">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18.5h4" stroke-linecap="round"/></svg>
+          </div>
+          <div class="exp-body">
+            <span class="chip chip--lav" data-i18n="tag_uiux">Lomba UI/UX Design</span>
+            <h3>The Ace 2025</h3>
+            <button class="text-toggle" data-i18n="see_more">Lihat Selengkapnya</button>
+            <div class="collapse">
+              <p data-i18n="lomba4_desc"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-img-wrap exp-img-wrap--icon exp-img-wrap--mint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8" stroke-linecap="round"/></svg>
+          </div>
+          <div class="exp-body">
+            <span class="chip chip--lav" data-i18n="tag_uiux">Lomba UI/UX Design</span>
+            <h3>Sitefest 4.0</h3>
+            <button class="text-toggle" data-i18n="see_more">Lihat Selengkapnya</button>
+            <div class="collapse">
+              <p data-i18n="lomba5_desc"></p>
             </div>
           </div>
         </div>
@@ -314,15 +327,10 @@
             <img src="img/Himsi.png" alt="HIMSI" class="exp-photo zoomable" />
           </div>
           <div class="exp-body">
-            <span class="exp-tag" data-i18n="tag_org">Organisasi Kampus</span>
-            <h3>HIMSI – Himpunan Mahasiswa Sistem Informasi</h3>
-            <p class="exp-period"><span>Periode:</span> 2025 – 2026 &nbsp;·&nbsp; <span>Koordinator Desain (Design Co.)</span></p>
-            <ul class="exp-duties">
-              <li>Memastikan standar desain sesuai tema/topik acara.</li>
-              <li>Membuat konten feed &amp; story Instagram (Poster, Feed Edukasi, dll).</li>
-              <li>Mengarahkan anggota tim dengan ide dan solusi desain.</li>
-              <li>Memastikan feed tidak mengalami typo dan inkonsistensi desain.</li>
-            </ul>
+            <span class="chip chip--teal" data-i18n="tag_org">Organisasi Kampus</span>
+            <h3>HIMSI - Himpunan Mahasiswa Sistem Informasi</h3>
+            <p class="exp-period"><span data-i18n="period">Periode</span>: 2025 - 2026 &nbsp;·&nbsp; <span data-i18n="org1_role">Koordinator Desain (Design Co.)</span></p>
+            <ul class="exp-duties" data-i18n="org1_duties"></ul>
           </div>
         </div>
       </div>
@@ -334,15 +342,10 @@
             <img src="img/PKL_1.jpeg" alt="PT Bet Obaja International" class="exp-photo zoomable" />
           </div>
           <div class="exp-body">
-            <span class="exp-tag">Praktik Kerja Lapangan</span>
+            <span class="chip chip--teal" data-i18n="tag_internship">Praktik Kerja Lapangan</span>
             <h3>PT Bet Obaja International <small>(Tour Travel)</small></h3>
-            <p class="exp-period">01 Des 2022 – 01 Mar 2023 &nbsp;·&nbsp; Staff Accounting &amp; Finance</p>
-            <ul class="exp-duties">
-              <li>Membuat Purchasing Invoice tiket perjalanan.</li>
-              <li>Membuat billing collection / tagihan perusahaan.</li>
-              <li>Mengelola pajak PPh 21 dan 23.</li>
-              <li>Melakukan Filling Document dan proses refund transaksi.</li>
-            </ul>
+            <p class="exp-period"><span data-i18n="work1_period">01 Des 2022 - 01 Mar 2023</span> &nbsp;·&nbsp; Staff Accounting &amp; Finance</p>
+            <ul class="exp-duties" data-i18n="work1_duties"></ul>
           </div>
         </div>
         <div class="exp-card">
@@ -350,15 +353,10 @@
             <img src="img/youtube_1.png" alt="YouTube Content Creator" class="exp-photo zoomable" />
           </div>
           <div class="exp-body">
-            <span class="exp-tag">Content Creator</span>
-            <h3>YouTube – Gaming Content Creator</h3>
-            <p class="exp-period">14 Sep 2019 – Sekarang</p>
-            <ul class="exp-duties">
-              <li>Membuat konten gaming harian (record gameplay dengan OBS).</li>
-              <li>Melakukan live streaming dengan OBS.</li>
-              <li>Melakukan pengeditan konten video.</li>
-              <li>Memastikan konten layak dipublikasikan.</li>
-            </ul>
+            <span class="chip chip--teal">Content Creator</span>
+            <h3>YouTube - Gaming Content Creator</h3>
+            <p class="exp-period" data-i18n="work2_period">14 Sep 2019 - Sekarang</p>
+            <ul class="exp-duties" data-i18n="work2_duties"></ul>
           </div>
         </div>
       </div>
@@ -368,11 +366,11 @@
   <!-- KONTAK -->
   <section class="section kontak-section" id="kontak">
     <div class="container">
-      <div class="kontak-inner">
+      <div class="kontak-card">
         <div class="kontak-left">
-          <div class="section-label">KONTAK SAYA</div>
-          <h2 class="section-title">Mari Berkolaborasi<br><em>Bersama</em></h2>
-          <p class="kontak-desc">Saya selalu terbuka untuk kolaborasi, diskusi proyek, atau peluang profesional baru. Jangan ragu untuk menghubungi saya!</p>
+          <h2 class="section-label" data-i18n="contact_label">Kontak Saya</h2>
+          <p class="kontak-title" data-i18n="contact_title">Mari Berkolaborasi Bersama</p>
+          <p class="kontak-desc" data-i18n="contact_desc"></p>
           <a href="mailto:marcellinonatanael74@gmail.com" class="kontak-email-link">
             marcellinonatanael74@gmail.com
             <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg>
@@ -380,39 +378,42 @@
         </div>
         <div class="kontak-right">
           <div class="social-grid">
-            <a href="https://wa.me/628979354860" class="social-card" title="WhatsApp" target="_blank">
+            <a href="https://wa.me/628979354860" class="social-card" title="WhatsApp" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor" class="sc-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
               <span>WhatsApp</span>
             </a>
-            <a href="mailto:marcellinonatanael74@gmail.com" class="social-card" title="Email">
-              <svg viewBox="0 0 24 24" fill="currentColor" class="sc-icon"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-              <span>Email</span>
-            </a>
-            <a href="https://www.linkedin.com/in/marcellino-natanael-929b44334" target="_blank" class="social-card" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/marcellino-natanael-929b44334" target="_blank" rel="noopener" class="social-card" title="LinkedIn">
               <svg viewBox="0 0 24 24" fill="currentColor" class="sc-icon"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               <span>LinkedIn</span>
             </a>
-            <a href="https://github.com/MarcellinoNatanael" target="_blank" class="social-card" title="GitHub">
+            <a href="https://github.com/MarcellinoNatanael" target="_blank" rel="noopener" class="social-card" title="GitHub">
               <svg viewBox="0 0 24 24" fill="currentColor" class="sc-icon"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
               <span>GitHub</span>
             </a>
-            <a href="https://www.instagram.com/itsarcellz" target="_blank" class="social-card" title="Instagram">
+            <a href="https://www.instagram.com/itsceldev" target="_blank" rel="noopener" class="social-card" title="Instagram">
               <svg viewBox="0 0 24 24" fill="currentColor" class="sc-icon"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
               <span>Instagram</span>
             </a>
-            <a href="https://www.youtube.com/channel/UCigRX1l8qcdL5e3IaI_ev9g" target="_blank" class="social-card" title="YouTube">
-              <svg viewBox="0 0 24 24" fill="currentColor" class="sc-icon"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
-              <span>YouTube</span>
-            </a>
-            <a href="https://www.threads.com/@itsarcellz" target="_blank" class="social-card" title="Threads">
-              <svg viewBox="0 0 24 24" fill="currentColor" class="sc-icon"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.028-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.378-.888h-.015c-.845 0-1.994.232-2.728 1.154l-1.593-1.24c.933-1.2 2.418-1.866 4.32-1.866h.023c3.016.018 4.822 1.902 5.07 5.31.285.046.57.1.854.165 1.558.38 2.794 1.163 3.567 2.272 1.012 1.444 1.116 3.454.28 5.365C20.12 22.57 17.335 24 12.186 24z"/></svg>
+            <a href="https://www.threads.com/@itsarcellz" target="_blank" rel="noopener" class="social-card" title="Threads">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="sc-icon"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.028-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.960-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.800-2.045 1.647-1.613 1.618-3.593 1.090-4.798-.31-.71-.873-1.300-1.634-1.750-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.140 1.704-3.730 1.790-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.740-1.752-2.964-.065-1.190.408-2.285 1.330-3.082.880-.760 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.020.142c-.126-.742-.375-1.332-.750-1.757-.513-.586-1.308-.883-2.378-.888h-.015c-.845 0-1.994.232-2.728 1.154l-1.593-1.240c.933-1.200 2.418-1.866 4.320-1.866h.023c3.016.018 4.822 1.902 5.070 5.310.285.046.570.100.854.165 1.558.380 2.794 1.163 3.567 2.272 1.012 1.444 1.116 3.454.280 5.365C20.120 22.570 17.335 24 12.186 24z"/></svg>
               <span>Threads</span>
+            </a>
+            <a href="CV.pdf" download="CV_Marcellino_Natanael.pdf" class="social-card social-card--cv" title="CV">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="sc-icon"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span data-i18n="hero_btn_cv">Unduh CV</span>
             </a>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="copyrightYear"></span> Marcellino Natanael. <span data-i18n="copyright">Hak cipta dilindungi.</span></p>
+      <p>UI/UX Designer &amp; System Analyst</p>
+    </div>
+  </footer>
 
   <script src="js/projects-data.js"></script>
   <script src="js/index.js"></script>

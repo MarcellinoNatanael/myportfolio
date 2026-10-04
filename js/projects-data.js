@@ -1,210 +1,208 @@
 /* ============================================================
-   MARCELLINO NATANAEL – Project Data
-   Single source of truth for the portfolio grid (index.html)
-   and the project detail template (project.html).
+   MARCELLINO NATANAEL - Project Data
+   Source data for the portfolio grid (index.html).
+   link: Figma URL for design projects, Gamejolt URL for games.
+         Leave '' while the link is not ready (button shows as disabled).
    ============================================================ */
 
 window.PROJECTS = [
-  /* ── MOBILE (UI/UX Design) ─────────────────────────────── */
+  /* ── MOBILE DESIGN ─────────────────────────────────────── */
   {
     id: 'ardor',
     category: 'mobile',
-    type: 'design',
     name: 'Ardor',
-    deviceType: 'Mobile App',
-    year: '2024',
+    year: '2025',
+    competition: true,
     description: {
-      id: 'Aplikasi pelacakan olahraga harian untuk kebugaran tubuh dengan integrasi AI yang canggih.',
-      en: 'Daily fitness tracking app with advanced AI integration.'
+      id: 'Aplikasi kebugaran dan tracking kesehatan yang dilengkapi dengan AI (Artificial Intelligence) untuk membantu penggunanya memulai hidup yang tidak hanya sehat, melainkan juga cerdas dalam menjaga kebugaran tubuhnya.',
+      en: 'A fitness and health tracking app powered by AI (Artificial Intelligence) that helps users start a lifestyle that is not only healthy, but also smart about keeping their body fit.'
     },
-    cover: 'img/Welcome_page.png',
-    images: ['img/Welcome_page.png', 'img/Ardor_Home_page.png', 'img/Smart_chat_page.png'],
-    method: 'Design Thinking & User-Centered Design',
-    figmaLink: '#',
-    prototypeLink: '#'
+    link: ''
   },
   {
-    id: 're-trash',
+    id: 'retrash',
     category: 'mobile',
-    type: 'design',
-    name: 'Re-Trash',
-    deviceType: 'Mobile App',
-    year: '2024',
+    name: 'Retrash',
+    year: '2025',
+    competition: false,
     description: {
-      id: 'Aplikasi daur ulang sampah dengan reward berupa poin untuk membuat lingkungan bersih yang berkelanjutan.',
-      en: 'Waste recycling app with a points reward system.'
+      id: 'Aplikasi pengumpul sampah daur ulang untuk mengelola limbah menjadi produk yang bermanfaat. Pengguna yang berhasil mengumpulkan banyak sampah daur ulang dapat menukarkannya ke mesin Re-Trash terdekat untuk mendapatkan reward berupa poin, sebagai ajakan bagi masyarakat untuk peduli pada lingkungan yang berkelanjutan.',
+      en: 'A recyclable waste collection app that turns waste into useful products. Users who collect plenty of recyclables can drop them at the nearest Re-Trash machine to earn reward points, encouraging people to care about a sustainable environment.'
     },
-    cover: 'img/Retrash_Splash_page.png',
-    images: ['img/Retrash_Splash_page.png', 'img/Retrash_Sign-In_page.png', 'img/Retrash_Home_page.png'],
-    method: 'Design Thinking & User-Centered Design',
-    figmaLink: '#',
-    prototypeLink: '#'
+    link: ''
   },
   {
-    id: 'ciputra',
+    id: 'ciputra-mobile',
     category: 'mobile',
-    type: 'design',
     name: 'Ciputra E-Property',
-    deviceType: 'Mobile App',
-    year: '2024',
+    year: '2025',
+    competition: false,
     description: {
-      id: 'Super app Ciputra mengintegrasikan pencarian rumah, pembayaran tagihan, dan transaksi dalam satu aplikasi.',
-      en: 'Ciputra super app — home search, bills, and transactions in one place.'
+      id: 'Super App Ciputra yang mengintegrasikan seluruh kebutuhan, mulai dari pencarian rumah, pembayaran tagihan, pengecekan kondisi rumah berkala, hingga transaksi lainnya dalam satu aplikasi.',
+      en: 'A Ciputra super app that brings every need together, from house hunting, bill payments and periodic home condition checks to other transactions, all in one app.'
     },
-    cover: 'img/Ciputra_login_page.png',
-    images: ['img/Ciputra_login_page.png', 'img/Ciputra_Home_page.png', 'img/Ciputra_Properti_page.png'],
-    method: 'Design Thinking & Human-Centered Design',
-    figmaLink: '#',
-    prototypeLink: '#'
+    link: ''
   },
   {
     id: 'padelin',
     category: 'mobile',
-    type: 'design',
     name: 'Padelin',
-    deviceType: 'Mobile App',
-    year: '2024',
+    year: '2026',
+    competition: false,
     description: {
-      id: 'Aplikasi kursus padel dengan sistem manajemen pengetahuan bersama coach dan komunitas.',
-      en: 'Padel course app with a knowledge management system shared with coaches and the community.'
+      id: 'Aplikasi kursus dan latihan olahraga padel dengan sistem sharing dan pembelajaran bersama coach atau komunitas padel.',
+      en: 'A padel course and training app with a sharing system for learning together with coaches or the padel community.'
     },
-    cover: 'img/Padelin_Sign-In_page.png',
-    images: ['img/Padelin_Sign-In_page.png', 'img/Padelin_Community_page.png', 'img/Padelin_Community_Join_page.png'],
-    method: 'Human-Centered Design',
-    figmaLink: '#',
-    prototypeLink: '#'
+    link: ''
   },
   {
     id: 'ladang-amal',
     category: 'mobile',
-    type: 'design',
     name: 'Ladang Amal',
-    deviceType: 'Mobile App',
-    year: '2024',
+    year: '2025',
+    competition: false,
     description: {
-      id: 'Aplikasi penggalangan donasi untuk korban bencana guna mendukung gerakan kemanusiaan.',
-      en: 'Donation fundraising app for disaster victims supporting humanitarian relief.'
+      id: 'Aplikasi penggalangan dana atau donasi untuk korban bencana guna mendukung gerakan kemanusiaan yang saling membantu, terutama kepada mereka yang membutuhkan.',
+      en: 'A fundraising and donation app for disaster victims that supports humanitarian movements of helping one another, especially those in need.'
     },
-    cover: 'img/Login_UI.png',
-    images: ['img/Login_UI.png', 'img/Home.png', 'img/Peta.png'],
-    method: 'Design Thinking & User-Centered Design',
-    figmaLink: '#',
-    prototypeLink: '#'
+    link: ''
+  },
+  {
+    id: 'go-sweating',
+    category: 'mobile',
+    name: 'Go Sweating',
+    year: '2025',
+    competition: true,
+    description: {
+      id: 'Aplikasi kebugaran fisik dan tracking nutrisi kebutuhan tubuh dengan sejumlah fitur yang relevan.',
+      en: 'A physical fitness and body nutrition tracking app with a set of relevant features.'
+    },
+    link: ''
   },
 
-  /* ── WEBSITE ────────────────────────────────────────────── */
+  /* ── WEB DESIGN ────────────────────────────────────────── */
   {
-    id: 'administration-crud',
+    id: 'chstore',
     category: 'website',
-    type: 'design',
-    name: 'Administration CRUD',
-    deviceType: 'Website',
-    year: '2025',
+    name: 'CHStore',
+    year: '2026',
+    competition: false,
     description: {
-      id: 'Sistem administrasi CRUD untuk PT Karisma Dinamika Purwa dalam menunjang operasional perusahaan.',
-      en: 'Full CRUD administration system for PT Karisma Dinamika Purwa supporting daily company operations.'
+      id: 'Website E-Commerce (B2C) yang dirancang untuk pengguna yang memiliki bisnis reseller iPhone agar dapat menjangkau lebih banyak customer dan mempermudah owner dalam melakukan manajemen produk.',
+      en: 'A B2C e-commerce website designed for iPhone resellers to reach more customers and make product management easier for the owner.'
     },
-    cover: 'img/Crud_1.png',
-    images: ['img/Crud_1.png', 'img/Crud_2.png', 'img/Crud_3.png'],
-    method: 'SDLC – Waterfall',
-    figmaLink: '#',
-    prototypeLink: '#'
+    link: ''
   },
   {
-    id: 'sistem-pendukung-keputusan',
+    id: 'karisma-rekomendasi',
     category: 'website',
-    type: 'design',
-    name: 'Sistem Pendukung Keputusan',
-    deviceType: 'Website',
-    year: '2025',
+    name: 'Aplikasi Internal Penentuan Rekomendasi Aset Lelang PT Karisma Dinamika Purwa',
+    nameEn: 'Auction Asset Recommendation Internal App, PT Karisma Dinamika Purwa',
+    year: '2026',
+    competition: false,
     description: {
-      id: 'Aplikasi prioritas aset lelang PT Karisma Dinamika Purwa menggunakan algoritma Simple Additive Weighting (SAW).',
-      en: 'Decision support system for auction-asset prioritization at PT Karisma Dinamika Purwa using the SAW algorithm.'
+      id: 'Aplikasi internal PT Karisma Dinamika Purwa untuk menentukan rekomendasi aset lelang sebelum dipublikasikan, menggunakan algoritma SAW (Simple Additive Weighting) yang menggabungkan perhitungan bobot kriteria dengan matriks untuk menghasilkan perangkingan dan rekomendasi kelayakan.',
+      en: 'An internal app for PT Karisma Dinamika Purwa that recommends auction assets before they are published, using the SAW (Simple Additive Weighting) algorithm to combine criteria weights with a matrix to produce rankings and feasibility recommendations.'
     },
-    cover: 'img/Karisma_Dashboard_Page.png',
-    images: ['img/Karisma_Dashboard_Page.png', 'img/Karisma_Criteria_Page.png', 'img/Karisma_Assessment_Weigh_Page.png'],
-    method: 'Extreme Programming (XP)',
-    figmaLink: '#',
-    prototypeLink: '#'
+    link: ''
+  },
+  {
+    id: 'karisma-pemasaran',
+    category: 'website',
+    name: 'Aplikasi Internal Pemasaran Aset Lelang PT Karisma Dinamika Purwa',
+    nameEn: 'Auction Asset Marketing Internal App, PT Karisma Dinamika Purwa',
+    year: '2026',
+    competition: false,
+    description: {
+      id: 'Aplikasi internal PT Karisma Dinamika Purwa untuk memasarkan aset lelang yang sudah dinilai kelayakannya. Website dilengkapi fitur seperti optimasi SEO (Search Engine Optimization) dan Google Calendar agar produk mudah dicari dan penjadwalan publikasi aset terdokumentasi dengan baik.',
+      en: 'An internal app for PT Karisma Dinamika Purwa that markets auction assets that have passed the feasibility assessment. It includes SEO (Search Engine Optimization) and Google Calendar integration so listings are easy to find and publication schedules are well documented.'
+    },
+    link: ''
+  },
+  {
+    id: 'ciputra-web',
+    category: 'website',
+    name: 'Ciputra E-Property Web Version',
+    year: '2026',
+    competition: false,
+    description: {
+      id: 'Super App Ciputra versi website yang mengintegrasikan seluruh kebutuhan, mulai dari pencarian rumah, pembayaran tagihan, pengecekan kondisi rumah berkala, hingga transaksi lainnya dalam satu aplikasi.',
+      en: 'The web version of the Ciputra super app, bringing every need together, from house hunting, bill payments and periodic home condition checks to other transactions, in one place.'
+    },
+    link: ''
+  },
+  {
+    id: 'nowl-vision',
+    category: 'website',
+    name: 'Nowl Vision Game (Company Profile)',
+    year: '2026',
+    competition: false,
+    description: {
+      id: 'Website portfolio bisnis pribadi yang bergerak di bidang Game Development untuk memperkenalkan game, baik yang sudah maupun belum dirilis, kepada publik.',
+      en: 'A portfolio website for a personal game development business that introduces both released and upcoming games to the public.'
+    },
+    link: ''
+  },
+  {
+    id: 'meraki-soundscape',
+    category: 'website',
+    name: 'Meraki Soundscape',
+    year: '2026',
+    competition: false,
+    description: {
+      id: 'Website blog yang berfokus pada ulasan, review, dan rekomendasi produk audio seperti TWS dan headphone untuk para pengguna produk audio.',
+      en: 'A blog website focused on reviews and recommendations of audio products such as TWS earbuds and headphones for audio enthusiasts.'
+    },
+    link: ''
   },
 
-  /* ── GAME ───────────────────────────────────────────────── */
+  /* ── GAME DEVELOPMENT ──────────────────────────────────── */
   {
-    id: 'wewe-gombel',
+    id: 'the-child-kidnapper',
     category: 'game',
-    type: 'game',
-    name: 'Wewe Gombel Horror Game',
-    genre: '3D Horror · Puzzle Solving',
-    releaseYear: '2024',
-    badge: '🏆 Juara 3 + Favorit',
+    name: 'The Child Kidnapper',
+    year: '2024',
+    competition: true,
     description: {
-      id: 'Game 3D horror lokal tentang anak yang diculik wewe gombel. Juara 3 & Favorit I/O Fest 2024 – Universitas Tarumanegara.',
-      en: 'Local 3D horror game about a child kidnapped by Wewe Gombel. 3rd Place & Favorite at I/O Fest 2024 – Universitas Tarumanegara.'
+      id: 'Perancangan, pengembangan, dan optimalisasi game bertemakan Nusantara yang mengangkat kisah urban legend Wewe Gombel untuk memperkenalkan budaya, cerita rakyat, dan urban legend yang dimiliki Indonesia.',
+      en: 'Design, development and optimization of an Indonesian-themed game based on the Wewe Gombel urban legend, introducing the culture, folklore and urban legends of Indonesia.'
     },
-    cover: 'img/Gombel_1_1.png',
-    images: ['img/Gombel_1_1.png', 'img/Gombel_2.png', 'img/Gombel_1_3.png'],
-    requirements: {
-      min: { OS: 'Win 10/11 64-bit', Processor: 'i5-8400', GPU: 'GTX 1060 6GB', RAM: '8 GB', Storage: '10 GB SSD' },
-      rec: { OS: 'Win 11 64-bit', Processor: 'i7-10700K', GPU: 'RTX 3060', RAM: '16 GB', Storage: '10 GB SSD' }
-    },
-    downloadLink: '#'
+    link: ''
   },
   {
     id: 'jurig-jiwa',
     category: 'game',
-    type: 'game',
     name: 'Jurig Jiwa Nu Leungit',
-    genre: '3D Horror',
-    releaseYear: '2024',
+    year: '2024',
+    competition: true,
     description: {
-      id: 'Game 3D Horror lokal bercerita tentang pesugihan berakhir tragis. Lomba Hology 7.0 – Universitas Brawijaya 2024.',
-      en: 'Local 3D horror game about a dark pesugihan story. Hology 7.0 – Universitas Brawijaya 2024.'
+      id: 'Perancangan, pengembangan, dan optimalisasi game bertemakan lokal yang mengangkat kisah pesugihan sebuah keluarga yang berujung pada kutukan bagi keluarga tersebut.',
+      en: 'Design, development and optimization of a locally themed game about a family that performs a pesugihan ritual, which brings a curse upon the whole family.'
     },
-    cover: 'img/jurig_1.png',
-    images: ['img/jurig_1.png', 'img/jurig_2.png', 'img/jurig_3.png'],
-    requirements: {
-      min: { OS: 'Win 10 64-bit', Processor: 'i5-8400', GPU: 'GTX 1060 6GB', RAM: '8 GB', Storage: '10 GB SSD' },
-      rec: { OS: 'Win 11 64-bit', Processor: 'i7-10700K', GPU: 'RTX 3060', RAM: '16 GB', Storage: '10 GB SSD' }
-    },
-    downloadLink: 'https://drive.google.com/drive/folders/13mLicJ_2n0_N6vzwlxLpZ1F8Uv6TgNwZ?usp=drive_link'
-  },
-  {
-    id: 'the-heritage',
-    category: 'game',
-    type: 'game',
-    name: 'The Heritage (Cursed Bloodline)',
-    genre: '3D Horror · Lowpoly',
-    releaseYear: '2025',
-    badge: '🥇 Juara 1',
-    description: {
-      id: 'Game 3D Horror lowpoly tentang kutukan keluarga. Juara 1 IT Fest Universitas Paramadina 2025.',
-      en: 'Lowpoly 3D horror game about a family curse. 1st Place at IT Fest Universitas Paramadina 2025.'
-    },
-    cover: 'img/Foto_1.png',
-    images: ['img/Foto_1.png', 'img/Foto_2.png', 'img/Foto_3.png'],
-    requirements: {
-      min: { OS: 'Win 10/11 64-bit', Processor: 'i5-3570 / Ryzen 5 1400', GPU: 'GTX 1050 / RX 550', RAM: '8 GB', Storage: '3 GB SSD' },
-      rec: { OS: 'Win 10/11 64-bit', Processor: 'i7-4970 / Ryzen 7 1700X', GPU: 'GTX 1060 / 1650 Super', RAM: '16 GB', Storage: '3 GB SSD' }
-    },
-    downloadLink: 'https://gamejolt.com/games/perjanjiangaib/997572'
+    link: 'https://drive.google.com/drive/folders/13mLicJ_2n0_N6vzwlxLpZ1F8Uv6TgNwZ?usp=drive_link'
   },
   {
     id: 'demit',
     category: 'game',
-    type: 'game',
     name: 'Demit',
-    genre: '3D Horror',
-    releaseYear: '2024',
+    year: '2024',
+    competition: false,
     description: {
-      id: 'Game 3D Horror tentang mahasiswa yang menemukan tempat tinggal murah dengan sejarah kelam era kolonial Belanda.',
-      en: 'A 3D horror game about a student who finds cheap accommodation with a dark colonial-era history.'
+      id: 'Perancangan, pengembangan, dan optimalisasi game bertemakan lokal tentang seorang mahasiswa perantau yang mencari tempat tinggal murah. Saking murahnya, ia tidak mengetahui kisah kelam yang pernah terjadi di tempat itu pada masa lampau.',
+      en: 'Design, development and optimization of a locally themed game about an out-of-town student looking for cheap lodging. It is so cheap that he never learns about the dark history of the place.'
     },
-    cover: 'img/Gambar_1.png',
-    images: ['img/Gambar_1.png', 'img/Gambar_2.png', 'img/Gambar_3.png'],
-    requirements: {
-      min: { OS: 'Win 10/11 64-bit', Processor: 'i5-6600K / Ryzen 5 2600', GPU: 'GTX 1060 / RX 580', RAM: '8 GB', Storage: '6 GB SSD' },
-      rec: { OS: 'Win 10/11 64-bit', Processor: 'i7-7700K / Ryzen 7 1700X', GPU: 'GTX 1080 / RTX 2060 Super', RAM: '16 GB', Storage: '6 GB SSD' }
+    link: 'https://gamejolt.com/games/demithorrorgame/907891'
+  },
+  {
+    id: 'perjanjian-gaib',
+    category: 'game',
+    name: 'Perjanjian Gaib',
+    year: '2025',
+    competition: true,
+    description: {
+      id: 'Perancangan, pengembangan, dan optimalisasi game bertemakan lokal tentang perjanjian gaib keluarga Jaka yang diwariskan turun-temurun dan justru mendatangkan petaka. Akankah Jaka berhasil mematahkan kutukan tersebut, atau menerima keadaan?',
+      en: 'Design, development and optimization of a locally themed game about a supernatural pact made by Jaka\'s family, passed down for generations and bringing only disaster. Will Jaka break the curse, or accept his fate?'
     },
-    downloadLink: 'https://gamejolt.com/games/demithorrorgame/907891'
+    link: 'https://gamejolt.com/games/perjanjiangaib/997572'
   }
 ];
