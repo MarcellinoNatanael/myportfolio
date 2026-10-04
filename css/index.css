@@ -285,6 +285,18 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .project-card--mint{background:var(--mint)}
 .project-card--yellow{background:var(--yellow)}
 
+.project-media{
+  display:grid;gap:8px;height:200px;margin-bottom:.25rem;
+  border-radius:var(--r-md);overflow:hidden;
+  background:rgba(255,255,255,.45);
+}
+.project-media--2{grid-template-columns:1fr 1fr}
+.project-media img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .45s ease}
+.project-media img:hover{transform:scale(1.04)}
+.project-media-empty{
+  display:flex;align-items:center;justify-content:center;
+  font-size:4rem;font-weight:800;color:rgba(17,24,39,.18);
+}
 .project-meta{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .project-tag{
   font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;

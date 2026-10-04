@@ -213,8 +213,13 @@ function renderPortfolio() {
       const link  = p.link
         ? `<a class="project-link" href="${p.link}" target="_blank" rel="noopener">${label} ${arrow}</a>`
         : `<span class="project-link is-disabled" title="${t.link_soon}">${label} ${arrow}</span>`;
+      const imgs  = (p.images || []).slice(0, 2);
+      const media = imgs.length
+        ? imgs.map((src, n) => `<img src="${src}" alt="${p.name} ${n + 1}" class="zoomable" loading="lazy" />`).join('')
+        : `<span class="project-media-empty">${p.name.charAt(0)}</span>`;
       return `
         <article class="project-card project-card--${CARD_COLORS[i % CARD_COLORS.length]}">
+          <div class="project-media project-media--${imgs.length || 'empty'}">${media}</div>
           <div class="project-meta">
             <span class="project-tag">${t['cat_' + p.category]}</span>
             <span class="project-year">${p.year}</span>
